@@ -1,15 +1,16 @@
-name: Scheduled Task awesome-azd PR
+name: Awesome-azd Integration PR
 permissions:
   actions: write
   contents: write
 on:
   schedule:
     - cron: '0 3 * * 0'
-  workflow_dispatch:
 
 jobs:
     integrate_pr:
       runs-on: ubuntu-latest
+      environment: "AzD Integration"
+
       steps:
         - name: Checkout respository
           uses: actions/checkout@v2
@@ -20,10 +21,15 @@ jobs:
           run: |
             curl -o ${{ github.workspace }}/templates.json https://raw.githubusercontent.com/Azure/awesome-azd/main/website/static/templates.json
         
-        - name: Running Script
+        - name: Updating Workloads
           run: |
             echo "Running script"
             python ${{ github.workspace }}/scripts/add_awesome_azd/add_azd.py --root ${{ github.workspace }} --input_file ${{ github.workspace }}/templates.json
+
+        - name: Generating Fields
+          run: |
+            echo "Generating New Fields"
+            python ${{ github.workspace }}/scripts/generate_workloads/workloads.py --new-workloads
 
         - name: Configure Git
           run: |
@@ -41,6 +47,6 @@ jobs:
           with:
             token: ${{ secrets.GITHUB_TOKEN }}
             branch: auto-update
-            base: dev
+            base: github/update-workload-fields
             title: 'Automated PR: Update workloads.json'
             body: 'This PR is created automatically to update workloads.json with the latest changes.'

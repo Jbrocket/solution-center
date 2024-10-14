@@ -9,11 +9,11 @@ FIELDS_THAT_NEED_RESPONSES = ["keyFeatures"]
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] - %(levelname)s - %(message)s')
 
-def get_responses(workload: dict, client: AzureOpenAI, deployment_model: str) -> dict | str:
+def get_responses(workload: dict, client: AzureOpenAI, deployment_model: str, fields_that_need_responses = FIELDS_THAT_NEED_RESPONSES) -> dict | str:
     logging.info(f"Processing workload: {workload['title']}")
     if workload["sourceType"] != "ExecDocs": external_data = get_readme(workload['source'])
     else: external_data = ""
-    for field in FIELDS_THAT_NEED_RESPONSES:
+    for field in fields_that_need_responses:
         logging.info(f"Getting response for {field}")
         try:
             workload[field] = get_field_response(client, workload, field, deployment_model)
@@ -53,7 +53,6 @@ def get_field_response(client: AzureOpenAI, workload: dict, field: str, deployme
                 }
             ],
         )
-        # print(f"{field}: {response.choices[0].message.content}")
         return json.loads(response.choices[0].message.content)
     except Exception as e:
         return str(response.choices[0].message.content)
