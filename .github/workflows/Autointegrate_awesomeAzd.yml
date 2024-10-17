@@ -25,6 +25,7 @@ jobs:
           run: |
             echo "Running script"
             python ${{ github.workspace }}/scripts/add_awesome_azd/add_azd.py --root ${{ github.workspace }} --input_file ${{ github.workspace }}/templates.json
+            rm ${{ github.workspace }}/templates.json
 
         - name: Generating Fields
           run: |
