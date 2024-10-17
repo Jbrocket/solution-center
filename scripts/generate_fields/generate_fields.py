@@ -9,10 +9,10 @@ from utils.fields import get_fields
 FILE_PATH = "workloads/workloads.json"
 DEPLOYMENT_MODEL = "gpt4o"
 FAILED_WORKLOADS = "failed_workloads.json"
-SUCCESSFUL_WORKLOADS = "new_workloads.json"
+SUCCESSFUL_WORKLOADS = "workloads/workloads.json"
 
 
-def main(all_workloads: bool = False, fields: str = ""):
+def main(all_workloads: bool = False, fields: str = "", root: str = ".", output: str = ""):
     """
     Process workloads with Azure OpenAI.
     
@@ -30,7 +30,7 @@ def main(all_workloads: bool = False, fields: str = ""):
 
     fields_that_need_responses = get_fields(fields)
 
-    workloads = read_file(FILE_PATH)
+    workloads = read_file(f"{root}/{FILE_PATH}")
 
     client = AzureOpenAI(
         api_key = os.getenv("AZURE_OPENAI_API_KEY"),
@@ -41,9 +41,12 @@ def main(all_workloads: bool = False, fields: str = ""):
     finished_workloads = []
 
     for workload in workloads:
-        finished_workloads.append(get_responses(workload, client, DEPLOYMENT_MODEL, fields_that_need_responses))
+        finished_workloads.append(get_responses(workload, client, DEPLOYMENT_MODEL, fields_that_need_responses, all_workloads))
     
-    write_file(SUCCESSFUL_WORKLOADS, finished_workloads)
+    if not output:
+        write_file(f"{root}/{SUCCESSFUL_WORKLOADS}", finished_workloads)
+    else:
+        write_file(output, finished_workloads)
     
 
 if __name__ == '__main__':
@@ -65,4 +68,4 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    main(args.all_workloads, args.fields)
+    main(args.all_workloads, args.fields, args.output, args.root)
