@@ -1,9 +1,9 @@
 ALL_FIELDS = {
+    "G": "tags",
     "F": "keyFeatures",
     "P": "products",
     "T": "tech",
     "Q": "sampleQueries",
-    "N": "negativeMatch",
 }
 
 def get_fields(field_string: str) -> list:

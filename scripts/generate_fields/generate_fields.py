@@ -30,6 +30,7 @@ def main(all_workloads: bool = False, fields: str = "", root: str = ".", output:
 
     fields_that_need_responses = get_fields(fields)
 
+    if not root: root = "."
     workloads = read_file(f"{root}/{FILE_PATH}")
 
     client = AzureOpenAI(
@@ -61,11 +62,11 @@ if __name__ == '__main__':
         ),
         formatter_class=argparse.RawTextHelpFormatter
     )
-    parser.add_argument('-r', '--root', type=str, help='Path to the root directory', required=True)
+    parser.add_argument('-r', '--root', type=str, help='Path to the root directory')
     parser.add_argument('-a', '--all-workloads', action='store_true', help='Process all workloads')
     parser.add_argument('-f', '--fields', type=str, default='', help='String of fields to turn on, letters to indicate fields')
     parser.add_argument('-o', '--output', type=str, help='Path to the output file')
 
     args = parser.parse_args()
 
-    main(args.all_workloads, args.fields, args.output, args.root)
+    main(all_workloads=args.all_workloads, fields=args.fields, root=args.root, output=args.output)
