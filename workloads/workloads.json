@@ -4094,14 +4094,11 @@
             "Azure CLI"
         ],
         "keyFeatures": [
-            "Deploy an AKS cluster using the Azure CLI",
+            "Deploy an AKS cluster using Azure CLI",
             "Run a sample multi-container application with microservices and web front ends",
-            "Create a resource group",
-            "Download credentials using az aks get-credentials command",
-            "Connect to the cluster using kubectl",
-            "Deploy the application using a YAML manifest",
-            "Test the application by accessing the service IP address",
-            "Delete the cluster to clean up resources"
+            "Managed Kubernetes service for quick deployment and management",
+            "Configure kubectl to connect to Kubernetes cluster",
+            "Manifest file defining desired state for application"
         ]
     },
     {
@@ -4144,15 +4141,13 @@
             "HTML"
         ],
         "keyFeatures": [
-            "Deploy a static site to Azure Static Web Apps",
-            "Use Azure CLI",
-            "Define environment variables",
-            "Create resource group",
-            "Deploy from a repository",
-            "Wait for deployment",
-            "Get web app URL",
-            "Use GitHub template",
-            "Clean up resources"
+            "Deploy web application using Azure CLI",
+            "Publish websites to production from code repository",
+            "Utilize GitHub template repository for starter app",
+            "Define environment variables for deployment",
+            "Create and manage resource groups in Azure",
+            "Automatic build and publish workflow for web apps",
+            "Use GitHub for repository management and CI/CD"
         ]
     },
     {
@@ -4192,22 +4187,7 @@
         ],
         "sourceType": "ExecDocs",
         "tech": [],
-        "keyFeatures": [
-            "Free interactive Azure Cloud Shell",
-            "Create resource group",
-            "Create network resources",
-            "Create virtual network and subnet",
-            "Create subnet for Application Gateway",
-            "Create Static IP",
-            "Create Application Gateway",
-            "Create Virtual Machine Scale Set",
-            "Install nginx with VM Scale Sets extensions",
-            "Define autoscale profile",
-            "Create autoscale out rule",
-            "Create autoscale in rule",
-            "Test the page",
-            "Clean up resources"
-        ]
+        "keyFeatures": "cannot access local variable 'response' where it is not associated with a value"
     },
     {
         "title": "Quickstart: Use the Azure CLI to create a Linux Virtual Machine",
@@ -4247,15 +4227,11 @@
             "Azure Active Directory"
         ],
         "keyFeatures": [
-            "Use Azure CLI to create and manage Linux VMs",
-            "Deploy a Linux VM in Azure",
-            "Azure Cloud Shell with preinstalled Azure tools",
-            "Log in to Azure using the CLI",
-            "Create resource groups",
-            "Generate or use existing SSH keys",
-            "Deploy the latest Ubuntu 22.04 image",
-            "Enable Azure AD Login for a Linux VM",
-            "Store and use VM's IP address to SSH"
+            "Deploy a Linux virtual machine using Azure CLI",
+            "Manage Azure resources via command line or scripts",
+            "Enable Azure AD Login for a Linux virtual machine",
+            "Store IP address of VM for SSH access",
+            "Use Azure Cloud Shell for ease of running commands"
         ],
         "tech": [
             "Bash",
@@ -4305,16 +4281,12 @@
         ],
         "sourceType": "ExecDocs",
         "keyFeatures": [
-            "Create an Ubuntu VM",
+            "Deploy NGINX web server on Ubuntu VM",
+            "Install and configure Azure MySQL Flexible Server",
+            "Setup PHP environment and install WordPress",
             "Open ports 80 and 443 for web traffic",
-            "Install and Secure NGINX, Azure Flexible MySQL Server, and PHP",
-            "Verify installation and configuration",
-            "Install WordPress",
-            "Configure cloud-init for LEMP stack and WordPress setup",
-            "Set up LEMP networking and DNS",
-            "Enable Microsoft Entra ID login for VM",
-            "Configure server parameters for MySQL",
-            "Install and configure SSL certificates using certbot"
+            "Enable SSL for WordPress site using certbot",
+            "Use Azure CLI and Azure Cloud Shell for management"
         ],
         "tech": [
             "Nginx",
@@ -4364,16 +4336,14 @@
             "Bash"
         ],
         "keyFeatures": [
-            "Step-by-step deployment of Inspektor Gadget in an AKS cluster",
-            "Define environment variables",
-            "Create a resource group",
-            "Create an AKS cluster",
-            "Install kubectl",
-            "Configure kubectl to connect to your cluster",
-            "Verify connection to your cluster",
-            "Install Inspektor Gadget kubectl plugin",
-            "Deploy Inspektor Gadget in the cluster",
-            "Next steps with links to real-world scenarios"
+            "Deploy Inspektor Gadget in AKS cluster",
+            "Use Azure CLI for deployment",
+            "Define environment variables for setup",
+            "Create resource group and AKS cluster",
+            "Install and use kubectl for Kubernetes management",
+            "Install Inspektor Gadget plugin and deploy in cluster",
+            "Configure credentials for cluster access",
+            "Monitor cluster with Inspektor Gadget"
         ]
     },
     {
@@ -4425,23 +4395,14 @@
             "Vue"
         ],
         "keyFeatures": [
-            "Step-by-step tutorial for creating Azure Kubernetes Web Application",
-            "Secured via HTTPS",
-            "Uses Azure CLI",
-            "Define environment variables for setup",
-            "Create resource group",
-            "Create virtual network and subnet",
-            "Register to AKS Azure Resource Providers",
-            "Create autoscaling, availability zone enabled AKS cluster",
-            "Install az aks CLI locally",
-            "Configure kubectl to connect to Kubernetes cluster",
-            "Install NGINX Ingress Controller",
-            "Deploy sample Azure Vote application",
-            "Use Kubernetes manifest to define cluster state",
-            "Applications include Azure Vote, Redis, order service, product service, and store front",
-            "Add HTTPS termination to custom domain using Cert Manager",
-            "Obtain SSL certificate via Helm charts",
-            "Browse deployment secured via HTTPS"
+            "Step-by-step tutorial for creating a secure web application",
+            "Deploy scalable Azure Kubernetes Service (AKS) cluster",
+            "HTTPS secured AKS deployment",
+            "Use Helm to install NGINX Ingress Controller",
+            "Automate SSL certificate management with Cert Manager",
+            "Deploy microservices using Kubernetes manifests",
+            "Use Kubernetes for container orchestration",
+            "Enable AKS cluster autoscaling and Container insights"
         ]
     },
     {
@@ -4481,15 +4442,12 @@
             "Linux"
         ],
         "keyFeatures": [
-            "Use Azure CLI to deploy RHEL VM",
-            "Launch Azure Cloud Shell",
-            "Define environment variables",
-            "Log in to Azure CLI",
-            "Create resource group",
-            "Create the virtual machine",
-            "Enable Azure AD Login for Linux VM",
-            "Store IP address of VM",
-            "SSH into the VM"
+            "Use Azure CLI to manage resources",
+            "Deploy Red Hat Enterprise Linux VM",
+            "Launch Azure Cloud Shell for interactive CLI",
+            "Define and use environment variables",
+            "Enable Azure AD Login for Linux VMs",
+            "SSH into virtual machine"
         ]
     },
     {
@@ -4532,20 +4490,14 @@
             "Linux"
         ],
         "keyFeatures": [
-            "Deploy Ubuntu Linux virtual machine using Azure CLI",
-            "Attach an Azure Data Disk to a virtual machine",
-            "Use Azure Cloud Shell for executing commands",
-            "Log in to Azure using CLI commands",
-            "Create and manage Azure resources with Azure CLI",
-            "Create a resource group for the deployment",
-            "Create a VM and generate SSH keys",
-            "Integrate Azure Active Directory for VM authentication",
-            "Enable and configure VM extensions for added functionality",
-            "Attach new or existing data disks to a VM",
-            "Format and mount data disks",
-            "Update and verify disk mounts on VMs",
-            "SSH into the deployed VM",
-            "Manage access to VMs using Azure role-based access control"
+            "Use Azure CLI to create and manage Azure resources",
+            "Create an Ubuntu Linux virtual machine in Azure",
+            "Attach and manage Azure Data Disks",
+            "Azure Active Directory authentication for Linux VMs",
+            "Use of Azure Cloud Shell",
+            "SSH into the Linux VM using Azure AD",
+            "Attach new or existing data disks to VMs",
+            "Commands to format and mount data disks"
         ]
     },
     {
@@ -4588,15 +4540,13 @@
             "Python"
         ],
         "keyFeatures": [
-            "deploy Postgres vector database",
-            "use Azure CLI",
-            "setup resource group",
-            "create Postgres database",
-            "set up OpenAI resource",
-            "use psql for database operations",
-            "create embeddings table",
-            "clone and run chatbot code",
-            "install Python dependencies"
+            "Setup a Postgres vector database on Azure",
+            "Deploy Linux virtual machine using Azure CLI",
+            "Integrate and set up OpenAI resources",
+            "Run a RAG-LLM model",
+            "Create and manage Azure resources via command line",
+            "Install and configure required Python dependencies",
+            "Clone and run chatbot code from repository"
         ]
     },
     {
@@ -4637,22 +4587,11 @@
             "Kubernetes"
         ],
         "keyFeatures": [
-            "Simplifies OSS AI model management on AKS",
-            "Automatically provisions necessary GPU nodes",
-            "Sets up inference server endpoints",
-            "Reduces onboarding time",
-            "Focus on AI model usage and development",
-            "Azure CLI version 2.47.0 or later required",
-            "Kubernetes command-line client kubectl required",
-            "Azure subscription with GPU VM quota required",
-            "Supports KAITO version v0.1.0",
-            "Enables creation of AKS clusters with the AI toolchain operator add-on",
-            "Allows enabling the add-on on existing AKS clusters",
-            "Provides environment variables for configuration",
-            "OIDC issuer enablement required",
-            "Managed identity used for GPU node pools",
-            "Role assignment creation for service principals",
-            "Deployment verification using kubectl commands"
+            "Managed add-on for AKS",
+            "Simplifies OSS AI model management and deployment",
+            "Automatic provisioning of GPU nodes",
+            "Sets up inference server as an endpoint",
+            "Reduces onboarding time for AI model usage and development"
         ]
     },
     {

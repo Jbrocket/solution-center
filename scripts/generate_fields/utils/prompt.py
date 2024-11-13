@@ -119,4 +119,10 @@ If AzureSamples then it's a simple github repository.
 KEY_FEATURES_PROMPT = """You are an expert at reading all the provided content and understanding the key features of the workload. Please list the key features of the workload in a json list object that can be read with json.loads() in python. THIS MEANS YOU ONLY RETURN THE LIST OBJECT WITH NO OTHER WORDS, AND STRING ARE DOUBLE QUOTED ALWAYS.
 Key features are the main capabilities of the workload that make it unique and valuable. These are the features that users would be most interested in when deciding whether to use the workload. Include anything important.
 Your important information that you are including from the README.md should be longer than a word or two, but not overly verbose either. Short sentence length or three word bullet point key feature.
+THESE SHOULD BE OVERARCHING THEMES, NOT SOMETHING SMALL AND SPECIFIC THAT DOESN"T ENCAPSULATE GENERAL IDEAS. "CREATE A RESOURCE GROUP" DOES NOT ENCAPSUATE GENERAL IDEAS. If you want to mention that you're creating resources, explain more specific resources and why it's important to the workload.
+
+GOOD Examples:
+"React application for Azure AI Search", "Web interface for visualizing retrieval modes", and "Supports image search using text-to-image and image-to-image functionalities" are all great examples of a multi-dimensional answer.
+
+DON"T PUT SHORT BAD EXAMPLES LIKE "create a resource group" THIS IS BAD.
 """
