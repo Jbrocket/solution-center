@@ -4302,7 +4302,8 @@
             "Azure Cloud Shell",
             "Azure CLI"
         ],
-        "sampleQueries": "'sourceType'",
+        "sampleQueries": [],
+        "sourceType": "ExecDocs",
         "keyFeatures": [
             "Create an Ubuntu VM",
             "Open ports 80 and 443 for web traffic",
