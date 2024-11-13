@@ -16,7 +16,7 @@ def get_responses(workload: dict, client: AzureOpenAI, deployment_model: str, fi
     external_data = get_readme(workload['source'])
     if workload["id"] == "": workload["id"] = str(uuid.uuid4())
     for field in fields_that_need_responses:
-        if not all_workloads and workload.get(field, None): continue
+        if (not all_workloads and workload.get(field, None)): continue
         logging.info(f"Getting response for {field}")
         
         try:

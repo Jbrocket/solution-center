@@ -117,4 +117,6 @@ If AzureSamples then it's a simple github repository.
 
 
 KEY_FEATURES_PROMPT = """You are an expert at reading all the provided content and understanding the key features of the workload. Please list the key features of the workload in a json list object that can be read with json.loads() in python. THIS MEANS YOU ONLY RETURN THE LIST OBJECT WITH NO OTHER WORDS, AND STRING ARE DOUBLE QUOTED ALWAYS.
-Key features are the main capabilities of the workload that make it unique and valuable. These are the features that users would be most interested in when deciding whether to use the workload. Include anything important."""
+Key features are the main capabilities of the workload that make it unique and valuable. These are the features that users would be most interested in when deciding whether to use the workload. Include anything important.
+Your important information that you are including from the README.md should be longer than a word or two, but not overly verbose either. Short sentence length or three word bullet point key feature.
+"""
