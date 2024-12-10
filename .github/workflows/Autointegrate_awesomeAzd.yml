@@ -68,6 +68,6 @@ jobs:
             title: "Triggered PR for update of workloads.json"
             body: "Automated update of workloads.json"
             branch: update-workloads
-            base: main
+            base: dev
             labels: "automated-pr"
-            draft: false
+            reviewers: ${{ github.actor }}
