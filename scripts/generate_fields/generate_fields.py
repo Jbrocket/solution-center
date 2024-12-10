@@ -7,7 +7,7 @@ from utils.get_responses import get_responses
 from utils.fields import get_fields
 
 FILE_PATH = "workloads/workloads.json"
-DEPLOYMENT_MODEL = "gpt4o"
+DEPLOYMENT_MODEL = "gpt-4o-mini"
 FAILED_WORKLOADS = "failed_workloads.json"
 SUCCESSFUL_WORKLOADS = "workloads/workloads.json"
 

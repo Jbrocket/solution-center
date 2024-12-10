@@ -16,20 +16,23 @@ jobs:
           with:
             ref: dev
           
-        - name: Fetch workloads from azd
+        - name: Fetch workloads from azd and exec docs scenarios
           run: |
             curl -o ${{ github.workspace }}/templates.json https://raw.githubusercontent.com/Azure/awesome-azd/main/website/static/templates.json
-        
+            curl -o ${{ github.workspace }}/exec_metadata.json https://raw.githubusercontent.com/MicrosoftDocs/executable-docs/main/scenarios/metadata.json
+
         - name: Updating Workloads
           run: |
             echo "Running script"
-            python ${{ github.workspace }}/scripts/add_awesome_azd/add_azd.py --root ${{ github.workspace }} --input_file ${{ github.workspace }}/templates.json
+            python ${{ github.workspace }}/scripts/add_workloads/add_azd.py --root ${{ github.workspace }} --input_file ${{ github.workspace }}/templates.json
+            python ${{ github.workspace }}/scripts/add_workloads/add_exec_docs.py --root ${{ github.workspace }} --input_file ${{ github.workspace }}/exec_metadata.json
             rm ${{ github.workspace }}/templates.json
+            rm ${{ github.workspace }}/exec_metadata.json
 
         - name: Generating Fields
           run: |
             echo "Generating New Fields"
-            python ${{ github.workspace }}/scripts/generate_workloads/workloads.py --new-workloads
+            python ${{ github.workspace }}/scripts/generate_fields/generate_fields --root ${{ github.workspace }}
 
         - name: Configure Git
           run: |
