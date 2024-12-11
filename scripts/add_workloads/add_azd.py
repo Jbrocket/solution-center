@@ -1,6 +1,6 @@
-import json
-import uuid
-import argparse
+import json, uuid, argparse, logging
+
+logging.basicConfig(level=logging.INFO, format='[%(asctime)s] - %(levelname)s - %(message)s')
 
 def main(root: str, input_file: str, check_quality: bool = False):
     workloads_file = f"{root}/workloads/workloads.json"
@@ -29,11 +29,13 @@ def main(root: str, input_file: str, check_quality: bool = False):
 
     ## Add correct keys for new_workloads
     for azd_workload in new_workloads:
+        logging.info(f"Processing workload: {workload['title']}")
         if azd_workload["source"] in unique_azd:
             for key in azd_workload.keys():
                 if key in correct_keys:
                     unique_azd[azd_workload["source"]][key] = azd_workload[key]
         else:
+            logging.info(f"Adding new workload: {workload['title']}")
             new_workload = {}
             for key in correct_keys:
                 if key in azd_workload:

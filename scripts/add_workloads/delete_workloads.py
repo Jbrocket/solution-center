@@ -1,4 +1,6 @@
-import argparse, json, requests
+import argparse, json, requests, logging
+
+logging.basicConfig(level=logging.INFO, format='[%(asctime)s] - %(levelname)s - %(message)s')
 
 def main(root="."):
     workloads = json.load(open(f"{root}/workloads/workloads.json", "r"))
@@ -9,7 +11,10 @@ def main(root="."):
 
         print(res.status_code, workload["source"])
         if res.status_code == 200:
+            logging.info(f"Keeping workload {workload['title']}")
             keep_workloads.append(workload)
+        else:
+            logging.info(f"Removing workload {workload['title']}")
     
     json.dump(keep_workloads, open(f"{root}/workloads/workloads.json", "w"), indent=4)
 

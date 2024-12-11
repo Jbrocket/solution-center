@@ -32,7 +32,6 @@ def main(all_workloads: bool = False, fields: str = "", root: str = ".", output:
 
     if not root: root = "."
     workloads = read_file(f"{root}/{FILE_PATH}")
-
     client = AzureOpenAI(
         api_key = os.getenv("AZURE_OPENAI_API_KEY"),
         api_version = "2024-02-01",
