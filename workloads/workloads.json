@@ -911,7 +911,7 @@
             "bicep",
             "java",
             "typescript",
-            "appservice",
+            "aca",
             "cosmosdb",
             "keyvault",
             "monitor",
@@ -2530,6 +2530,7 @@
         "author": "Pierre Malarme",
         "source": "https://github.com/Azure-Samples/app-templates-java-openai-springapps",
         "tags": [
+            "java",
             "spring",
             "openai",
             "ai",
@@ -2596,6 +2597,7 @@
         "tags": [
             "java",
             "spring",
+            "aca",
             "openai",
             "ai",
             "appservice",
@@ -4055,7 +4057,7 @@
     },
     {
         "title": "Quickstart: Deploy an Azure Kubernetes Service (AKS) cluster using Azure CLI",
-        "description": "Learn how to quickly deploy a Kubernetes cluster and deploy an application in Azure Kubernetes Service (AKS) using Azure CLI.",
+        "description": "Learn how to quickly deploy a Kubernetes cluster and deploy an application in Azure Kubernetes Service (AKS) using Azure CLI",
         "author": "Microsoft",
         "source": "https://raw.githubusercontent.com/MicrosoftDocs/executable-docs/main/scenarios/azure-docs/articles/aks/learn/quick-kubernetes-deploy-cli.md",
         "tags": [
@@ -4186,7 +4188,12 @@
             "Can I find a tutorial for setting up virtual machines in a scale set via one-click in Azure?"
         ],
         "sourceType": "ExecDocs",
-        "tech": [],
+        "tech": [
+            "AzureCLI",
+            "Ubuntu2204",
+            "Linux",
+            "Bicep"
+        ],
         "keyFeatures": "cannot access local variable 'response' where it is not associated with a value"
     },
     {
@@ -5068,7 +5075,11 @@
             "terraform"
         ],
         "deploymentConfig": {},
-        "products": [],
+        "products": [
+            "Azure",
+            "Terraform",
+            "Ansible"
+        ],
         "sampleQueries": [
             "How can I automate the deployment of SAP HANA using the SAP Deployment Automation Framework on Azure?",
             "What tools are involved in setting up an automated SAP environment on Azure?",
@@ -5855,8 +5866,7 @@
             "speechservice",
             "azureai",
             "managedidentity",
-            "semantickernel",
-            "new"
+            "semantickernel"
         ],
         "id": "c1ea7827-0596-4556-a9be-01b772fd94a7",
         "deploymentOptions": [
@@ -5918,7 +5928,6 @@
             "vnets",
             "kernelmemory",
             "promptengineering",
-            "new",
             "rag"
         ],
         "id": "eb384955-4583-41de-a87f-42bf6bfb1439",
@@ -5990,8 +5999,7 @@
             "managedidentity",
             "openai",
             "aicollection",
-            "msft",
-            "new"
+            "msft"
         ],
         "id": "9691c16c-500a-40c2-9b55-994fff837a35",
         "deploymentOptions": [
@@ -6041,8 +6049,7 @@
             "aca",
             "azureai",
             "aicollection",
-            "msft",
-            "new"
+            "msft"
         ],
         "id": "0f6f3413-2d11-49fd-87a9-a87121f3a70a",
         "deploymentOptions": [
@@ -6083,6 +6090,1077 @@
             "Continuous deployment with GitHub Actions",
             "Local development server setup included",
             "Security measures and cost considerations provided"
+        ]
+    },
+    {
+        "title": "Quote of the Day: Feature Experimentation in .NET with Azure App Configuration",
+        "description": "An ASP.NET Core web app that demonstrates A/B testing using Azure App Configuration and the Microsoft Feature Management library.",
+        "author": "Azure App Configuration",
+        "source": "https://github.com/Azure-Samples/quote-of-the-day-dotnet",
+        "tags": [
+            "msft",
+            "dotnetCsharp",
+            "appinsights",
+            "appservice",
+            "azureappconfig",
+            "featureExperimentation",
+            "bicep",
+            "featuremanagement"
+        ],
+        "id": "a95b94dd-d43f-4f1c-9906-efd6741ac3bf",
+        "deploymentOptions": [
+            "AzD"
+        ],
+        "deploymentConfig": {},
+        "products": [
+            "Azure App Service",
+            "Azure Application Insights",
+            "Azure App Configuration"
+        ],
+        "sampleQueries": [
+            "How to implement A/B testing in an ASP.NET Core application with Azure App Configuration?",
+            "What are the steps to deploy a feature experimentation app using Azure Developer CLI?",
+            "How can I use the Microsoft Feature Management library for managing feature flags in my Azure application?"
+        ],
+        "sourceType": "Azd",
+        "tech": [
+            "ASP.NET",
+            "Bicep",
+            ".NET",
+            "AzureAppConfiguration"
+        ],
+        "keyFeatures": [
+            "ASP.NET Core web application for feature experimentation",
+            "Demonstrates A/B testing using Azure App Configuration",
+            "Integrates with the Microsoft Feature Management library",
+            "Provides quick setup using Azure Developer CLI",
+            "Enables easy resource creation and deployment",
+            "Simplifies testing and deployment of web applications",
+            "Facilitates user authentication and access management"
+        ]
+    },
+    {
+        "title": "Hello AZD",
+        "description": "A demo template that provides a getting started and welcome experience for the Azure Developer CLI. Run the template to provision and deploy resources to Azure and experiment with a working sample app.",
+        "author": "Azure Content Team",
+        "source": "https://github.com/Azure-Samples/hello-azd",
+        "tags": [
+            "dotnetCsharp",
+            "blobstorage",
+            "aca",
+            "cosmosdb",
+            "bicep",
+            "managedidentity",
+            "msft"
+        ],
+        "id": "ca2bf519-ac2e-4117-b049-5e298f87a55a",
+        "deploymentOptions": [
+            "AzD"
+        ],
+        "deploymentConfig": {},
+        "products": [
+            "Azure Blob Storage",
+            "Azure Container Apps",
+            "Azure Cosmos DB",
+            "Azure Bicep",
+            "Azure Managed Identity",
+            "Azure App Service",
+            "Azure Storage"
+        ],
+        "sampleQueries": [
+            "How do I get started with the Azure Developer CLI to provision resources?",
+            "What is the process to deploy a sample app using the Hello AZD template?",
+            "How can I utilize Bicep files in Azure Developer CLI for resource provisioning?"
+        ],
+        "sourceType": "Azd",
+        "tech": [
+            "Bicep",
+            ".NET",
+            "CosmosDB",
+            "BlobStorage"
+        ],
+        "keyFeatures": [
+            "Introductory demo template for Azure Developer CLI",
+            "Provision and deploy Azure resources seamlessly",
+            "Includes a sample app to demonstrate deployment",
+            "Infrastructure-as-code using Bicep for resource provisioning",
+            "Dev container configuration for cloud-hosted development",
+            "Continuous deployment workflows with GitHub Actions and Azure Pipelines",
+            "Managed identity configuration for secure resource access",
+            "Connects app to Azure Storage and CosmosDB"
+        ]
+    },
+    {
+        "title": "Azure OpenAI secure UI starter",
+        "description": "Reusable OpenAI secure UI and infrastructure for AI Chat with Azure",
+        "author": "Yohan Lasorsa",
+        "source": "https://github.com/Azure-Samples/openai-secure-ui-js",
+        "tags": [
+            "ai",
+            "bicep",
+            "gpt",
+            "serverlessapi",
+            "javascript",
+            "nodejs",
+            "openai",
+            "typescript",
+            "webcomponents",
+            "msft",
+            "functions",
+            "swa",
+            "azureai",
+            "aicollection",
+            "managedidentity"
+        ],
+        "id": "aed9dab9-1f2d-4ece-9e3f-8a8bff78580d",
+        "deploymentOptions": [
+            "AzD"
+        ],
+        "deploymentConfig": {},
+        "products": [
+            "Azure OpenAI",
+            "Azure Functions",
+            "Azure Static Web Apps",
+            "Azure Virtual Network"
+        ],
+        "sampleQueries": [
+            "How can I securely deploy an AI chat application using Azure OpenAI?",
+            "What are the steps to set up a reusable components UI for Azure OpenAI applications?",
+            "How do I configure authentication for a serverless AI chat app on Azure?"
+        ],
+        "sourceType": "Azd",
+        "tech": [
+            "Bicep",
+            "Javascript",
+            "Nodejs",
+            "Typescript",
+            "AzureFunctions",
+            "OpenAI"
+        ],
+        "keyFeatures": [
+            "Reusable OpenAI secure UI for AI Chat",
+            "Keyless authentication using Azure Managed Identity",
+            "Backend resources secured within an Azure Virtual Network",
+            "Serverless architecture utilizing Azure Functions and Azure Static Web Apps",
+            "Customizable web components for user authentication and AI chat UI",
+            "Supports local development for testing with Ollama",
+            "Scalable and cost-effective deployment leveraging Azure's offerings",
+            "Configurable user authentication and authorization mechanisms"
+        ]
+    },
+    {
+        "title": "Azure Cosmos DB for NoSQL Quickstart - .NET",
+        "description": "A quick application to get started using Azure Cosmos DB for NoSQL with the Azure SDK for .NET.",
+        "author": "Azure Cosmos DB Content Team",
+        "source": "https://github.com/azure-samples/cosmos-db-nosql-dotnet-quickstart",
+        "tags": [
+            "cosmosdb",
+            "dotnetCsharp",
+            "aca",
+            "managedidentity",
+            "bicep",
+            "msft"
+        ],
+        "id": "570a5a06-6891-4ab0-8086-37b0b860689b",
+        "deploymentOptions": [
+            "AzD"
+        ],
+        "deploymentConfig": {},
+        "products": [
+            "Azure Cosmos DB"
+        ],
+        "sampleQueries": [
+            "How to get started with Azure Cosmos DB for NoSQL using .NET?",
+            "What are the steps to deploy an ASP.NET application on Azure using Azure Developer CLI?",
+            "How can I leverage Azure Cosmos DB with a managed identity in my .NET applications?"
+        ],
+        "sourceType": "Azd",
+        "tech": [
+            "Bicep",
+            ".NET",
+            "C#"
+        ],
+        "keyFeatures": [
+            "Quickstart application for Azure Cosmos DB using Azure SDK for .NET",
+            "Illustrates common usage of Azure Cosmos DB for NoSQL",
+            "Provides a simple Blazor web application example",
+            "Step-by-step initialization using Azure Developer CLI",
+            "Supports local development with Docker integration",
+            "Facilitates easy deployment to Azure infrastructure",
+            "Includes options for running the application locally",
+            "Demonstrates effective cloud resource provisioning"
+        ]
+    },
+    {
+        "title": "Azure Cosmos DB for NoSQL Quickstart - Python",
+        "description": "A quick application to get started using Azure Cosmos DB for NoSQL with the Azure SDK for Python.",
+        "author": "Azure Cosmos DB Content Team",
+        "source": "https://github.com/azure-samples/cosmos-db-nosql-python-quickstart",
+        "tags": [
+            "cosmosdb",
+            "python",
+            "aca",
+            "managedidentity",
+            "bicep",
+            "msft"
+        ],
+        "id": "d6b4a73e-e02d-46f9-8497-74f09d276295",
+        "deploymentOptions": [
+            "AzD"
+        ],
+        "deploymentConfig": {},
+        "products": [
+            "Azure Cosmos DB",
+            "Python"
+        ],
+        "sampleQueries": [
+            "How to get started with Azure Cosmos DB for NoSQL using Python?",
+            "What are the prerequisites for deploying a Flask web application on Azure with Cosmos DB?",
+            "How to provision Azure infrastructure using Azure Developer CLI for a Python application?"
+        ],
+        "sourceType": "Azd",
+        "tech": [
+            "Bicep",
+            "Python",
+            "Docker"
+        ],
+        "keyFeatures": [
+            "Quickstart application for Azure Cosmos DB with Python",
+            "Simple Flask web application demonstrating Azure Cosmos DB use",
+            "Provision and deploy Azure resources easily with CLI",
+            "Supports Docker for streamlined development and testing",
+            "Illustrates common usage patterns for NoSQL databases"
+        ]
+    },
+    {
+        "title": "Azure Cosmos DB for NoSQL Quickstart - Node.js",
+        "description": "A quick application to get started using Azure Cosmos DB for NoSQL with the Azure SDK for Node.js.",
+        "author": "Azure Cosmos DB Content Team",
+        "source": "https://github.com/azure-samples/cosmos-db-nosql-nodejs-quickstart",
+        "tags": [
+            "cosmosdb",
+            "nodejs",
+            "aca",
+            "managedidentity",
+            "bicep",
+            "msft"
+        ],
+        "id": "1e656ce8-c43c-4bff-8ea5-f281446b5179",
+        "deploymentOptions": [
+            "AzD"
+        ],
+        "deploymentConfig": {},
+        "products": [
+            "Azure Cosmos DB"
+        ],
+        "sampleQueries": [
+            "How to get started with Azure Cosmos DB for NoSQL using Node.js?",
+            "What are the steps to deploy a web application using Azure Cosmos DB and Azure SDK?",
+            "How can I use Azure Developer CLI to provision resources for a Node.js application?"
+        ],
+        "sourceType": "Azd",
+        "tech": [
+            "Nodejs",
+            "Typescript",
+            "Javascript",
+            "Bicep",
+            "CosmosDB"
+        ],
+        "keyFeatures": [
+            "Express web application demonstrating basic usage of Azure Cosmos DB for NoSQL",
+            "Utilizes Azure SDK for Node.js for seamless integration",
+            "Easy initialization of Azure infrastructure using Azure Developer CLI",
+            "Ability to run the application locally for development and testing",
+            "Supports Docker for environment setup and deployment"
+        ]
+    },
+    {
+        "title": "Azure Cosmos DB for NoSQL Quickstart - Java",
+        "description": "A quick application to get started using Azure Cosmos DB for NoSQL with the Azure SDK for Java.",
+        "author": "Azure Cosmos DB Content Team",
+        "source": "https://github.com/azure-samples/cosmos-db-nosql-java-quickstart",
+        "tags": [
+            "cosmosdb",
+            "java",
+            "aca",
+            "managedidentity",
+            "bicep",
+            "msft"
+        ],
+        "id": "d5c5a571-cde5-4b01-9c30-fed3206abd91",
+        "deploymentOptions": [
+            "AzD"
+        ],
+        "deploymentConfig": {},
+        "products": [
+            "Azure Cosmos DB"
+        ],
+        "sampleQueries": [
+            "How to quickly set up an Azure Cosmos DB for NoSQL application using Java?",
+            "What are the prerequisites for deploying a Java application with Azure Cosmos DB on Azure?",
+            "How can I provision Azure infrastructure for a NoSQL Java app using the Azure Developer CLI?"
+        ],
+        "sourceType": "Azd",
+        "tech": [
+            "Java",
+            "Bicep",
+            "CosmosDB"
+        ],
+        "keyFeatures": [
+            "Simple Spring web application showcasing Azure Cosmos DB usage",
+            "Utilizes Azure SDK for Java to manage NoSQL data",
+            "Easy initialization with Azure Developer CLI for setup",
+            "Supports deployment of web applications to Azure infrastructure",
+            "Docker integration for local development and testing"
+        ]
+    },
+    {
+        "title": "Azure Cosmos DB for NoSQL Quickstart - Go",
+        "description": "A quick application to get started using Azure Cosmos DB for NoSQL with the Azure SDK for Go.",
+        "author": "Azure Cosmos DB Content Team",
+        "source": "https://github.com/azure-samples/cosmos-db-nosql-go-quickstart",
+        "tags": [
+            "cosmosdb",
+            "go",
+            "aca",
+            "managedidentity",
+            "bicep",
+            "msft"
+        ],
+        "id": "bec5e920-a361-4232-84c3-11dee0443d5a",
+        "deploymentOptions": [
+            "AzD"
+        ],
+        "deploymentConfig": {},
+        "products": [
+            "Azure Cosmos DB"
+        ],
+        "sampleQueries": [
+            "How to get started with Azure Cosmos DB for NoSQL using Go?",
+            "What are the steps to deploy a web application using Azure Cosmos DB and Azure Developer CLI?",
+            "How do I provision Azure infrastructure with azd for a Go application?"
+        ],
+        "sourceType": "Azd",
+        "tech": [
+            "Go",
+            "Bicep",
+            "CosmosDB"
+        ],
+        "keyFeatures": [
+            "Simple web application demonstrating Azure Cosmos DB for NoSQL usage",
+            "Quick start guide for deploying with Azure SDK for Go",
+            "Requirements for Docker and Azure Developer CLI for setup",
+            "Powerful infrastructure provisioning with Azure Developer CLI",
+            "Easy initialization of templates via command line commands"
+        ]
+    },
+    {
+        "title": "Azure Functions C# HTTP Trigger using Azure Developer CLI",
+        "description": "This repository contains an Azure Functions HTTP trigger quickstart written in C# and deployed to Azure Functions Flex Consumption using the Azure Developer CLI (azd). The sample uses managed identity and a virtual network to make sure deployment is secure by default.",
+        "author": "Azure Functions Team",
+        "source": "https://github.com/Azure-Samples/functions-quickstart-dotnet-azd",
+        "tags": [
+            "functions",
+            "dotnetCsharp",
+            "managedidentity",
+            "vnets",
+            "appinsights",
+            "msft",
+            "bicep"
+        ],
+        "id": "72078246-6f65-44d2-b42f-d53597504849",
+        "deploymentOptions": [
+            "AzD"
+        ],
+        "deploymentConfig": {},
+        "products": [
+            "Azure Functions"
+        ],
+        "sampleQueries": [
+            "How to deploy an Azure Functions HTTP trigger using the Azure Developer CLI?",
+            "What steps are required to configure managed identity for Azure Functions?",
+            "How can I set up secure deployments for Azure Functions with virtual networks?"
+        ],
+        "sourceType": "Azd",
+        "tech": [
+            "C#",
+            "Bicep",
+            ".NET"
+        ],
+        "keyFeatures": [
+            "Azure Functions HTTP trigger example in C#",
+            "Uses Azure Developer CLI for deployment",
+            "Supports managed identity for secure deployment",
+            "Shows example of HTTP GET and POST triggers",
+            "Can be configured to use or skip virtual networks",
+            "Includes local development instructions with Azure Functions Core Tools",
+            "Simplifies deployment with `azd` commands",
+            "Demonstrates invoking functions through local and Azure endpoints"
+        ]
+    },
+    {
+        "title": "Azure Functions Python HTTP Trigger using Azure Developer CLI",
+        "description": "This repository contains an Azure Functions HTTP trigger quickstart written in Python and deployed to Azure Functions Flex Consumption using the Azure Developer CLI (azd). The sample uses managed identity and a virtual network to make sure deployment is secure by default.",
+        "author": "Azure Functions Team",
+        "source": "https://github.com/Azure-Samples/functions-quickstart-python-http-azd",
+        "tags": [
+            "functions",
+            "python",
+            "managedidentity",
+            "vnets",
+            "appinsights",
+            "msft",
+            "bicep"
+        ],
+        "id": "2d110760-4850-442a-b205-735bb933a5f4",
+        "deploymentOptions": [
+            "AzD"
+        ],
+        "deploymentConfig": {},
+        "products": [
+            "Azure Functions",
+            "Azure Developer CLI"
+        ],
+        "sampleQueries": [
+            "How to quickly deploy an Azure Functions app using the Azure Developer CLI?",
+            "What are the benefits of using managed identity with Azure Functions written in Python?",
+            "How to ensure secure deployment of Azure Functions with virtual networks?"
+        ],
+        "sourceType": "Azd",
+        "tech": [
+            "Python",
+            "Bicep"
+        ],
+        "keyFeatures": [
+            "Azure Functions HTTP trigger sample in Python",
+            "Secure deployment using managed identity",
+            "Supports virtual network integration for security",
+            "Utilizes Azure Developer CLI for simplified deployment",
+            "Includes both HTTP GET and POST endpoints",
+            "Local development with Azure Functions Core Tools",
+            "Configurable deployment with environment settings",
+            "Easy resource management with Azure CLI commands"
+        ]
+    },
+    {
+        "title": "Azure Functions JavaScript HTTP Trigger using Azure Developer CLI",
+        "description": "This repository contains an Azure Functions HTTP trigger quickstart written in JavaScript and deployed to Azure Functions Flex Consumption using the Azure Developer CLI (azd). The sample uses managed identity and a virtual network to make sure deployment is secure by default.",
+        "author": "Azure Functions Team",
+        "source": "https://github.com/Azure-Samples/functions-quickstart-javascript-azd",
+        "tags": [
+            "functions",
+            "javascript",
+            "managedidentity",
+            "vnets",
+            "appinsights",
+            "msft",
+            "bicep"
+        ],
+        "id": "9f3482d7-4248-46fa-82dd-08245e0d52bd",
+        "deploymentOptions": [
+            "AzD"
+        ],
+        "deploymentConfig": {},
+        "products": [
+            "Azure Functions",
+            "Azure Developer CLI"
+        ],
+        "sampleQueries": [
+            "How can I quickly set up an Azure Functions HTTP trigger using the Azure Developer CLI?",
+            "What are the steps to deploy a JavaScript-based Azure Functions application to Azure?",
+            "How do I secure an Azure Functions deployment using managed identity and virtual networks?"
+        ],
+        "sourceType": "Azd",
+        "tech": [
+            "Bicep",
+            "Nodejs",
+            "Javascript"
+        ],
+        "keyFeatures": [
+            "Azure Functions HTTP trigger sample for JavaScript",
+            "Utilizes Azure Developer CLI for simplified deployment",
+            "Incorporates managed identity for enhanced security",
+            "Deploys to Azure Functions Flex Consumption plan",
+            "Supports secure communication via virtual network",
+            "Easy local development with Azure Functions Core Tools",
+            "Tests endpoints using popular HTTP tools like curl",
+            "Allows for GET and POST request handling",
+            "Automated provisioning of required Azure resources",
+            "Facilitates easy redeployment of code updates",
+            "Provides methods for cleaning up resources post-usage"
+        ]
+    },
+    {
+        "title": "Azure Functions TypeScript HTTP Trigger using Azure Developer CLI",
+        "description": "This repository contains an Azure Functions HTTP trigger quickstart written in TypeScript and deployed to Azure Functions Flex Consumption using the Azure Developer CLI (azd). The sample uses managed identity and a virtual network to make sure deployment is secure by default.",
+        "author": "Azure Functions Team",
+        "source": "https://github.com/Azure-Samples/functions-quickstart-typescript-azd",
+        "tags": [
+            "functions",
+            "typescript",
+            "managedidentity",
+            "vnets",
+            "appinsights",
+            "msft",
+            "bicep"
+        ],
+        "id": "d4856435-2417-409f-ad39-6ced9c606d08",
+        "deploymentOptions": [
+            "AzD"
+        ],
+        "deploymentConfig": {},
+        "products": [
+            "Azure Functions",
+            "Azure Developer CLI",
+            "Azure App Insights"
+        ],
+        "sampleQueries": [
+            "How can I quickly set up an Azure Function with TypeScript using the Azure Developer CLI?",
+            "What steps are needed to secure my Azure Function deployment with managed identity and virtual networks?",
+            "How do I handle HTTP requests in Azure Functions using TypeScript?"
+        ],
+        "sourceType": "Azd",
+        "tech": [
+            "Bicep",
+            "Nodejs",
+            "Typescript"
+        ],
+        "keyFeatures": [
+            "Azure Functions HTTP trigger implementation",
+            "Built using TypeScript for serverless architecture",
+            "Integrated with Azure Developer CLI for deployment",
+            "Secure by default with managed identity and virtual network",
+            "Supports both HTTP GET and POST requests",
+            "Easily initialize and deploy using command-line tools",
+            "Local development supported with Azure Functions Core Tools",
+            "Includes error handling for JSON input validation",
+            "Provision and manage Azure resources efficiently with azd"
+        ]
+    },
+    {
+        "title": "Azure Functions Java HTTP Trigger using Azure Developer CLI",
+        "description": "This repository contains an Azure Functions HTTP trigger quickstart written in Java and deployed to Azure Functions Flex Consumption using the Azure Developer CLI (AZD). This sample uses managed identity and a virtual network to insure it's secure by default.",
+        "author": "Azure Functions Team",
+        "source": "https://github.com/Azure-Samples/azure-functions-java-flex-consumption-azd",
+        "tags": [
+            "functions",
+            "java",
+            "managedidentity",
+            "vnets",
+            "appinsights",
+            "msft",
+            "bicep"
+        ],
+        "id": "00b218ce-b7da-4540-b244-1b12a334d1e2",
+        "deploymentOptions": [
+            "AzD"
+        ],
+        "deploymentConfig": {},
+        "products": [
+            "Azure Functions",
+            "Azure Developer CLI"
+        ],
+        "sampleQueries": [
+            "How do I deploy an Azure Function HTTP trigger using the Azure Developer CLI?",
+            "What steps are required to secure Azure Functions using managed identity and virtual networks?",
+            "How can I use Java to build HTTP-triggered functions in Azure Functions?"
+        ],
+        "sourceType": "Azd",
+        "tech": [
+            "Java",
+            "Bicep"
+        ],
+        "keyFeatures": [
+            "Azure Functions HTTP trigger sample written in Java",
+            "Deployed to Azure Functions Flex Consumption",
+            "Utilizes managed identity for enhanced security",
+            "Incorporates a virtual network for secure deployments",
+            "Supports both HTTP GET and POST requests",
+            "Compatible with Azure Developer CLI for easy initialization",
+            "Allows customization of environment settings during deployment",
+            "Uses Apache Maven for build and package management",
+            "Designed for local development and debugging with Visual Studio Code"
+        ]
+    },
+    {
+        "title": "Azure Functions PowerShell HTTP Trigger using Azure Developer CLI",
+        "description": "This repository contains an Azure Functions HTTP trigger quickstart written in PowerShell and deployed to Azure Functions Flex Consumption using the Azure Developer CLI (AZD). This sample uses managed identity and a virtual network to insure it's secure by default.",
+        "author": "Azure Functions Team",
+        "source": "https://github.com/Azure-Samples/functions-quickstart-powershell-azd",
+        "tags": [
+            "functions",
+            "powershell",
+            "managedidentity",
+            "vnets",
+            "appinsights",
+            "msft",
+            "bicep"
+        ],
+        "id": "2ffbc636-be50-4397-971e-1b0584f63f90",
+        "deploymentOptions": [
+            "AzD"
+        ],
+        "deploymentConfig": {},
+        "products": [
+            "Azure Functions",
+            "Azure Developer CLI"
+        ],
+        "sampleQueries": [
+            "How to deploy an Azure Functions HTTP trigger written in PowerShell using Azure Developer CLI?",
+            "What are the steps to secure Azure Functions using managed identity and virtual networks?",
+            "How to invoke HTTP triggers in Azure Functions from PowerShell?"
+        ],
+        "sourceType": "Azd",
+        "tech": [
+            "PowerShell",
+            "Bicep"
+        ],
+        "keyFeatures": [
+            "Azure Functions HTTP trigger written in PowerShell",
+            "Deploys easily using Azure Developer CLI",
+            "Uses managed identity for enhanced security",
+            "Integrates with virtual networks for secure deployments",
+            "Supports HTTP GET and POST requests",
+            "Local testing and debugging capabilities",
+            "Simplifies resource management with azd commands",
+            "Automated clean-up of Azure resources after use",
+            "Environment management to maintain deployment context"
+        ]
+    },
+    {
+        "title": "Doc Intelligence-In-A-Box",
+        "description": "The Doc Intelligence in-a-Box project leverages Azure AI Document Intelligence to extract data from PDF forms and store the data in a Azure Cosmos DB. This solution, part of the AI-in-a-Box framework by Microsoft Customer Engineers and Architects, ensures quality, efficiency, and rapid deployment of AI and ML solutions across various industries.",
+        "author": "AI-in-a-Box Team",
+        "source": "https://github.com/Azure-Samples/doc-intelligence-in-a-box",
+        "tags": [
+            "msft",
+            "bicep",
+            "cosmosdb",
+            "functions",
+            "serviceprincipal",
+            "logicapps",
+            "keyvault",
+            "azureai",
+            "blobstorage",
+            "ai"
+        ],
+        "id": "debb9f04-275b-41d3-a59d-0fcfed0b8f73",
+        "deploymentOptions": [
+            "AzD"
+        ],
+        "deploymentConfig": {},
+        "products": [
+            "Azure AI Document Intelligence",
+            "Azure Cosmos DB",
+            "Azure Functions",
+            "Azure Logic Apps",
+            "Azure Key Vault",
+            "Azure Blob Storage"
+        ],
+        "sampleQueries": [
+            "How can Azure AI Document Intelligence be utilized to automate form processing in my organization?",
+            "What steps are involved in deploying the Doc Intelligence-In-A-Box solution on Azure?",
+            "How does Azure Cosmos DB integrate with Azure AI Document Intelligence for data management?"
+        ],
+        "sourceType": "Azd",
+        "tech": [
+            "Python",
+            "Bicep",
+            "CosmosDB"
+        ],
+        "keyFeatures": [
+            "Leveraging Azure AI Document Intelligence for data extraction",
+            "Automates form processing to enhance accuracy and efficiency",
+            "Rapidly deploy AI and ML solutions across multiple industries",
+            "Integration with Azure Cosmos DB for secure data storage",
+            "Supports processing of various document types including handwritten forms",
+            "User-friendly interface allows manual review and corrections",
+            "Scalable solution to accommodate growing data volumes",
+            "Customizable to adapt to various business needs and document formats"
+        ]
+    },
+    {
+        "title": "Azure OpenAI keyless deployment",
+        "description": "Example Azure OpenAI deployment and RBAC role for your user account for keyless access",
+        "author": "Yohan Lasorsa",
+        "source": "https://github.com/Azure-Samples/azure-openai-keyless-js",
+        "tags": [
+            "ai",
+            "bicep",
+            "gpt",
+            "serverlessapi",
+            "javascript",
+            "nodejs",
+            "openai",
+            "typescript",
+            "msft",
+            "azureai",
+            "aicollection",
+            "managedidentity"
+        ],
+        "id": "1d3c1ead-d82b-4b00-ac82-cb6200386a30",
+        "deploymentOptions": [
+            "AzD"
+        ],
+        "deploymentConfig": {},
+        "products": [
+            "Azure OpenAI",
+            "Azure Managed Identity"
+        ],
+        "sampleQueries": [
+            "How can I deploy an Azure OpenAI service using keyless authentication?",
+            "What are the steps to provision Azure resources for an OpenAI project?",
+            "How do I implement RBAC for Azure OpenAI access in a serverless API environment?"
+        ],
+        "sourceType": "Azd",
+        "tech": [
+            "Bicep",
+            "Javascript",
+            "Nodejs",
+            "Typescript",
+            "OpenAI"
+        ],
+        "keyFeatures": [
+            "Azure OpenAI keyless deployment for secure API access",
+            "Utilizes RBAC roles for user-specific permissions",
+            "Supports keyless authentication using Managed Identity",
+            "Simplifies Azure resource provisioning with command-line tools",
+            "Built-in security practices for reducing API key risks",
+            "Ensure compliance with Microsoft security measures",
+            "Easy deployment with GitHub Codespaces integration",
+            "Region availability considerations for AI model usage",
+            "Guidance for pricing based on resource usage"
+        ]
+    },
+    {
+        "title": "Order processing workflow with Durable Functions",
+        "description": "This repository contains the implementation of an order processing workflow with Durable Functions in C#. The sample is deployed to Azure Functions Flex Consumption using the Azure Developer CLI (azd) and is configured with managed identity as the authentication mechanism.",
+        "author": "Azure Functions Team",
+        "source": "https://github.com/Azure-Samples/Durable-Functions-Order-Processing",
+        "tags": [
+            "functions",
+            "dotnetCsharp",
+            "managedidentity",
+            "bicep",
+            "msft"
+        ],
+        "id": "e62a0f79-6720-4541-83ba-796d4f74f4b8",
+        "deploymentOptions": [
+            "AzD"
+        ],
+        "deploymentConfig": {},
+        "products": [
+            "Azure Functions",
+            "Azure Storage"
+        ],
+        "sampleQueries": [
+            "How to implement an order processing workflow using Durable Functions in Azure?",
+            "What authentication mechanisms can I use with Azure Durable Functions?",
+            "How do I deploy a Durable Functions application using Azure Developer CLI?"
+        ],
+        "sourceType": "Azd",
+        "tech": [
+            "C#",
+            "Bicep"
+        ],
+        "keyFeatures": [
+            "Order processing workflow utilizing Durable Functions for stateful logic orchestration",
+            "Easily deployable to Azure Functions flex consumption environment",
+            "Managed identity authentication for secure resource access",
+            "Integration with Azure Storage for persistent application state management",
+            "Supports various development environments such as CLI, Visual Studio, and VS Code",
+            "Automatic resource provisioning including Function app, storage, and networking components",
+            "Feature to minimize cold start with always ready compute instances",
+            "Optimized message processing with reduced queue polling intervals"
+        ]
+    },
+    {
+        "title": "Azure Cosmos DB for Table Quickstart - .NET",
+        "description": "A quick application to get started using Azure Cosmos DB for Table with the Azure SDK for .NET.",
+        "author": "Azure Cosmos DB Content Team",
+        "source": "https://github.com/azure-samples/cosmos-db-table-dotnet-quickstart",
+        "tags": [
+            "cosmosdb",
+            "dotnetCsharp",
+            "aca",
+            "managedidentity",
+            "bicep",
+            "msft",
+            "new"
+        ],
+        "id": "cdf76c8d-6198-4f35-9d6c-5e7c5657ecb0",
+        "deploymentOptions": [
+            "AzD"
+        ],
+        "deploymentConfig": {},
+        "products": [
+            "Azure Cosmos DB"
+        ],
+        "sampleQueries": [
+            "How to get started with Azure Cosmos DB using the Azure SDK for .NET?",
+            "What are the steps to deploy a Blazor web application on Azure using Cosmos DB?",
+            "How to initialize and run an Azure Developer CLI template for Cosmos DB?"
+        ],
+        "sourceType": "Azd",
+        "tech": [
+            "Bicep",
+            ".NET",
+            "C#"
+        ],
+        "keyFeatures": [
+            "Simple Blazor web application for Azure Cosmos DB",
+            "Illustrates common usage of Azure SDK for .NET",
+            "Facilitates deployment to Azure using Azure Developer CLI",
+            "Includes local development capabilities with Docker",
+            "Quick provisioning of Azure infrastructure for streamlined setup"
+        ]
+    },
+    {
+        "title": "Azure Cosmos DB for Table Quickstart - Node.js",
+        "description": "A quick application to get started using Azure Cosmos DB for Table with the Azure SDK for Node.js.",
+        "author": "Azure Cosmos DB Content Team",
+        "source": "https://github.com/azure-samples/cosmos-db-table-nodejs-quickstart",
+        "tags": [
+            "cosmosdb",
+            "nodejs",
+            "aca",
+            "managedidentity",
+            "bicep",
+            "msft",
+            "new"
+        ],
+        "id": "e185936c-a385-4502-8421-310c0b963806",
+        "deploymentOptions": [
+            "AzD"
+        ],
+        "deploymentConfig": {},
+        "products": [
+            "Azure Cosmos DB"
+        ],
+        "sampleQueries": [
+            "How to get started with Azure Cosmos DB for Table using Node.js?",
+            "What are the steps to deploy a web application using Azure Developer CLI and Cosmos DB?",
+            "How can I initialize and provision resources for Azure Cosmos DB with the AzD templates?"
+        ],
+        "sourceType": "Azd",
+        "tech": [
+            "Bicep",
+            "Node.js",
+            "Javascript",
+            "Typescript",
+            "CosmosDB"
+        ],
+        "keyFeatures": [
+            "Simple Express web application for Azure Cosmos DB",
+            "Illustrates basic usage of Azure SDK for Node.js",
+            "Supports Docker for local development and deployment",
+            "Provisioning of Azure infrastructure using Azure Developer CLI",
+            "Ability to run application locally with npm commands",
+            "Includes multiple language templates for versatile development"
+        ]
+    },
+    {
+        "title": "Java Quarkus Apps on Azure Container Apps",
+        "description": "This repo builds and deploys Java Quarkus applications on Azure Container Apps using the Azure Developer CLI (azd).",
+        "author": "Jianguo Ma",
+        "source": "https://github.com/Azure-Samples/java-on-aca-quarkus",
+        "tags": [
+            "java",
+            "quarkus",
+            "aca",
+            "azuredb-postgreSQL",
+            "azuredb-mySQL",
+            "monitor",
+            "managedidentity",
+            "vuejs",
+            "bicep",
+            "msft",
+            "new"
+        ],
+        "id": "d531fae8-edb7-4e32-a5cc-8c046806efaa",
+        "deploymentOptions": [
+            "AzD"
+        ],
+        "deploymentConfig": {},
+        "products": [
+            "Azure Container Apps",
+            "Azure Database for PostgreSQL",
+            "Azure Database for MySQL",
+            "Azure Monitor"
+        ],
+        "sampleQueries": [
+            "How can I deploy a Java Quarkus application on Azure Container Apps using Azure Developer CLI?",
+            "What are the necessary steps to set up Azure Database for PostgreSQL with a Quarkus application?",
+            "How do I monitor a Java application running in Azure Container Apps?"
+        ],
+        "sourceType": "Azd",
+        "tech": [
+            "Java",
+            "Quarkus",
+            "Bicep",
+            "Vue.js",
+            "Docker",
+            "Nginx",
+            "AzureDB-PostgreSQL",
+            "AzureDB-MySQL"
+        ],
+        "keyFeatures": [
+            "Build and deploy Java Quarkus applications on Azure Container Apps",
+            "Microservices architecture for scalability and flexibility",
+            "Integration with Azure Database for PostgreSQL and MySQL",
+            "Monitoring capabilities using Azure Monitor and OpenTelemetry",
+            "Utilization of Azure Developer CLI for streamlined deployment",
+            "Supports Docker containers for efficient application hosting",
+            "Vue.js frontend for responsive user interaction"
+        ]
+    },
+    {
+        "title": "Spring Petclinic Microservices with AI on Azure Container Apps",
+        "description": "A Spring Petclinic Microservice with OpenAI running on Azure Container Apps environment, with additional Azure services and Azure Container Apps features.",
+        "author": "Songbo Wang",
+        "source": "https://github.com/Azure-Samples/java-microservices-aca-lab",
+        "tags": [
+            "java",
+            "aca",
+            "azuredb-mySQL",
+            "monitor",
+            "managedidentity",
+            "bicep",
+            "keyvault",
+            "appinsights",
+            "msft",
+            "openai",
+            "aicollection",
+            "new"
+        ],
+        "id": "2c0644dc-7c1c-47e0-aaa0-946befe232dd",
+        "deploymentOptions": [
+            "AzD"
+        ],
+        "deploymentConfig": {},
+        "products": [
+            "Azure Container Apps",
+            "Azure Database for MySQL - Flexible Server",
+            "Azure OpenAI Service",
+            "Azure Monitor",
+            "Azure Keyvault",
+            "Azure Application Insights"
+        ],
+        "sampleQueries": [
+            "How can I deploy a Spring Petclinic microservice with AI features on Azure Container Apps?",
+            "What are the prerequisites for using Azure Database for MySQL with Java applications?",
+            "How do I integrate OpenAI with Azure services for a microservices architecture?"
+        ],
+        "sourceType": "Azd",
+        "tech": [
+            "Java",
+            "Maven",
+            "Bicep",
+            "AzureDB-MySQL"
+        ],
+        "keyFeatures": [
+            "Spring Petclinic Microservices deployment on Azure Container Apps",
+            "Integration with Azure OpenAI for AI chat capabilities",
+            "Support for cloud-native Java components and features",
+            "Provisioning of diverse Azure resources using Bicep",
+            "Focus on security best practices for intelligent applications",
+            "Reliable and scalable architecture for Java applications on Azure"
+        ]
+    },
+    {
+        "title": "Sprint Petclinic AI application on Azure Container Apps",
+        "description": "A chat bot using Generative AI to the Spring Petclinic application, running on Azure Container Apps",
+        "author": "Songbo Wang",
+        "source": "https://github.com/Azure-Samples/spring-petclinic-ai",
+        "tags": [
+            "java",
+            "aca",
+            "managedidentity",
+            "bicep",
+            "msft",
+            "openai",
+            "new"
+        ],
+        "id": "b6cd83b2-d180-40a0-abfb-83f1d2306f7a",
+        "deploymentOptions": [
+            "AzD"
+        ],
+        "deploymentConfig": {},
+        "products": [
+            "Azure Container Apps",
+            "Azure OpenAI"
+        ],
+        "sampleQueries": [
+            "How can I implement a chatbot using Generative AI in the Spring Petclinic application?",
+            "What are the steps to deploy the Sprint Petclinic AI application on Azure Container Apps?",
+            "How do I integrate Managed Identity for Azure resources in the Spring Petclinic AI application?"
+        ],
+        "sourceType": "Azd",
+        "tech": [
+            "Java",
+            "Bicep",
+            "OpenAI",
+            "Spring",
+            "Maven",
+            "Gradle",
+            "H2",
+            "MySQL",
+            "PostgreSQL"
+        ],
+        "keyFeatures": [
+            "Chatbot integration with Spring Petclinic",
+            "Utilizes Generative AI for user interaction",
+            "Supports both OpenAI and Azure OpenAI models",
+            "Natural language processing for clinic inquiries",
+            "Deployed on Azure Container Apps for scalability",
+            "In-memory database configuration for quick setup"
+        ]
+    },
+    {
+        "title": "Simple Chat App using API Management Gateway and Azure OpenAI",
+        "description": "A chat interface that sends messages through API Management Azure OpenAI endpoints implementing load-balancing, circuit breaking and semantic caching, showcasing enterprise-grade API management for AI workloads.",
+        "author": "Chris Noring",
+        "source": "https://github.com/Azure-Samples/genai-gateway-apim",
+        "tags": [
+            "javascript",
+            "apim",
+            "managedidentity",
+            "bicep",
+            "msft",
+            "openai",
+            "new"
+        ],
+        "id": "a3925223-d4d9-4976-b87b-89d57f390ea3",
+        "deploymentOptions": [
+            "AzD"
+        ],
+        "deploymentConfig": {},
+        "products": [
+            "Azure API Management",
+            "Azure OpenAI Service"
+        ],
+        "sampleQueries": [
+            "How to set up a chat application using Azure API Management and Azure OpenAI?",
+            "What are the best practices for managing AI APIs with Azure API Management?",
+            "How do I implement load balancing and circuit breaking for an Azure OpenAI-powered application?"
+        ],
+        "sourceType": "Azd",
+        "tech": [
+            "Javascript",
+            "Bicep",
+            "OpenAI",
+            "Nodejs"
+        ],
+        "keyFeatures": [
+            "Enterprise-grade API management for AI workloads",
+            "Scalable architecture for AI applications",
+            "Load-balanced Azure OpenAI service utilization",
+            "Managed identity for secure authentication",
+            "Supports circuit breaking and rate limiting features",
+            "Chat interface enhancing user interaction",
+            "Cost management with budget and alert capabilities",
+            "Regional availability considerations for services",
+            "Robust troubleshooting and diagnostic resources"
         ]
     }
 ]
