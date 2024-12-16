@@ -1,2 +1,4 @@
 .DS_Store
 helper_functions.sh
+*.log
+workloads_vector*

@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Function Calling with Prompty, LangChain and Elastic Search",
+        "source": "https://github.com/Azure-Samples/agent-python-openai-prompty-langchain",
+        "id": "b2aa83fb-7911-4f5f-bf5f-4f429ca1d67d"
+    },
+    {
+        "title": "Function Calling with Prompty, LangChain and Pinecone",
+        "source": "https://github.com/Azure-Samples/agent-openai-python-prompty-langchain-pinecone",
+        "id": "283300a7-84d2-4768-9c38-27eb6eac18bd"
+    }
+]

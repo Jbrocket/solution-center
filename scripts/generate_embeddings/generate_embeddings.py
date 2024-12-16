@@ -3,10 +3,32 @@ import numpy as np
 import tiktoken
 from openai import AzureOpenAI
 
+LOG_FILENAME = 'info.log'
+
 FILE_PATH = "workloads/workloads.json"
+# DEPLOYMENT_MODEL = "text-embedding-ada-002"
 DEPLOYMENT_MODEL = "text-embedding-3-small"
-PAT = os.getenv("GITHUB_EMU_PAT")
+PAT = os.getenv("GITHUB_PERSONAL_PAT")
+EMU_PAT = os.getenv("GITHUB_EMU_PAT")
 HEADERS = {'Authorization': f'token {PAT}'}
+EMU_HEADERS = {'Authorization': f'token {EMU_PAT}'}
+logging.basicConfig(filename=LOG_FILENAME, level=logging.INFO, format='[%(asctime)s] - %(levelname)s - %(message)s')
+
+def remove_contributor_section(text: str) -> str:
+    patterns = [
+        r"## Contributors.*",
+        r"Contributors\n={4,}.*"
+    ]
+    
+    combined_pattern = "|".join(patterns)
+    
+    new_text = re.sub(combined_pattern, "", text, flags=re.DOTALL)
+    if text == new_text:
+        logging.info("Contributor section not found\n")
+    else:
+        logging.info(f"Contributor section removed {new_text}\n")
+
+    return new_text
 
 def read_file(file_path: str) -> list[dict]:
     with open(file_path, "r") as f:
@@ -27,20 +49,17 @@ def get_readme(github_url: str) -> str:
         response = requests.get(readme_url)
         if response.status_code == 404:
             try:
+                logging.info(f"Getting correct branch and readme from {github_url}")
                 github_api = github_url.replace(raw_github, "https://api.github.com/repos")
-                res = requests.get(github_api, headers=HEADERS)
-                repo_info = res.json()
-                main_branch = repo_info.get("default_branch", "main")
 
                 res = requests.get(f"{github_api}/contents", headers=HEADERS)
+                if res.status_code != 200:
+                    res = requests.get(f"{github_api}/contents", headers=EMU_HEADERS)
                 contents = res.json()
-                readme_file = [file['name'] for file in contents if 'readme' in file['name'].lower()][0]
+                readme_file = [file['download_url'] for file in contents if 'readme' in file['name'].lower()][0]
+                logging.info(f"Getting data from {readme_file}")
 
-                raw_github = "https://raw.githubusercontent.com"
-                github_url = github_url.replace("https://github.com", raw_github)
-                readme_url = f"{github_url}/refs/heads/{main_branch}/{readme_file}"
-
-                response = requests.get(readme_url)
+                response = requests.get(readme_file)
             except Exception as e:
                 logging.error(f"Error getting readme file: {e}")
                 raw_github = "https://raw.githubusercontent.com"
@@ -48,10 +67,11 @@ def get_readme(github_url: str) -> str:
                 readme_url = f"{github_url}/refs/heads/main/README.md"
                 response = requests.get(readme_url)
     else: 
+        logging.info(f"Getting data from {github_url}")
         readme_url = github_url
-        response = requests.get(readme_url, headers=HEADERS)
+        response = requests.get(readme_url)
 
-    return response.text, response
+    return remove_contributor_section(response.text), response
 
 def normalize_text(s, sep_token = " \n "):
     s = re.sub(r'\s+',  ' ', s).strip()
@@ -84,20 +104,22 @@ def generate_embeddings():
     )
 
     failed_workloads = []
+    new_workloads = []
     for workload in workloads:
-        print(workload["source"])
+        logging.info(f"Processing workload: {workload['title']} {workload['source']}")
         readmeString, raw = get_readme(workload["source"])
         readmeString = normalize_text(readmeString)
         readmeEncode = tokenizer.encode(readmeString)
         readmeDecode = tokenizer.decode_tokens_bytes(readmeEncode)
-        print(len(readmeDecode), f'{len(readmeDecode)<8192} {workload["source"]}')
+        logging.info(f"Workload {workload['title']} decode length: {len(readmeDecode)}, {len(readmeDecode)<8192}")
         if len(readmeDecode) == 4:
-            print(raw)
+            logging.error(f"Workload {workload['title']} no data")
             failed_workloads.append({
                 "title": workload["title"],
                 "source": workload["source"],
                 "id": workload["id"]
             })
+            continue
 
         keyFeaturesString = ""
         sampleQueriesString = ""
@@ -120,6 +142,8 @@ def generate_embeddings():
         baseline_vector = client.embeddings.create(input=normalize_text(workload["title"]), model=DEPLOYMENT_MODEL).data[0].embedding
 
         workload["allInOneVector"] = client.embeddings.create(input=normalize_text(workload["title"] + keyFeaturesString + sampleQueriesString + workload["description"]), model=DEPLOYMENT_MODEL).data[0].embedding
+
+        new_workloads.append(workload)
         # Calculate cosine similarity between the average vector and combined vector
         similarity = cosine_similarity([averageVector], workload["allInOneVector"])
         similarity_all_in_one_vs_readme = cosine_similarity([workload["allInOneVector"]], workload["readmeVector"])
@@ -127,16 +151,17 @@ def generate_embeddings():
         similarity_all_in_one_average_vs_baseline = cosine_similarity(baseline_vector, averageVector)
         similarity_all_in_one_vs_baseline = cosine_similarity([workload["allInOneVector"]], baseline_vector)
 
-        print(f"Similarity between average vector and combined vector: {similarity}")
-        print(f"Similarity between all in one vector and readme vector: {similarity_all_in_one_vs_readme}")
-        print(f"Similarity between readme vector and baseline vector: {similarity_readme_vs_baseline}")
-        print(f"Similarity between all in one average vector and baseline vector: {similarity_all_in_one_average_vs_baseline}")
-        print(f"Similarity between all in one vector and baseline vector: {similarity_all_in_one_vs_baseline}")
+        logging.info(f"Similarity between average vector and combined vector: {similarity}")
+        logging.info(f"Similarity between all in one vector and readme vector: {similarity_all_in_one_vs_readme}")
+        logging.info(f"Similarity between readme vector and baseline vector: {similarity_readme_vs_baseline}")
+        logging.info(f"Similarity between all in one average vector and baseline vector: {similarity_all_in_one_average_vs_baseline}")
+        logging.info(f"Similarity between all in one vector and baseline vector: {similarity_all_in_one_vs_baseline}\n\n")
 
         with open("scripts/generate_embeddings/similarities.json", "+a") as f:
             f.write(f"{similarity};{similarity_all_in_one_vs_readme};{similarity_readme_vs_baseline};{similarity_all_in_one_average_vs_baseline};{similarity_all_in_one_vs_baseline}\n")
 
-    write_file("workloads/workloads_readme_vector.json", workloads)
+    write_file("workloads/workloads_readme_vector.json", new_workloads)
+    write_file("workloads/failed_workloads.json", failed_workloads)
 
     return
 
