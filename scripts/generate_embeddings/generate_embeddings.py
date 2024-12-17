@@ -6,8 +6,8 @@ from openai import AzureOpenAI
 LOG_FILENAME = 'info.log'
 
 FILE_PATH = "workloads/workloads.json"
-# DEPLOYMENT_MODEL = "text-embedding-ada-002"
-DEPLOYMENT_MODEL = "text-embedding-3-small"
+DEPLOYMENT_MODEL = "text-embedding-ada-002"
+# DEPLOYMENT_MODEL = "text-embedding-3-small"
 PAT = os.getenv("GITHUB_PERSONAL_PAT")
 EMU_PAT = os.getenv("GITHUB_EMU_PAT")
 HEADERS = {'Authorization': f'token {PAT}'}
