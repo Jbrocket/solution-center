@@ -1,15 +1,30 @@
-import json, re, os
+import json, re, os, logging
 import requests
+import argparse
 
-VECTOR_FIELDS = [
-    "readmeVector", 
-    # "titleVector", 
-    # "keyFeaturesVector", 
-    # "descriptionVector", 
-    # "sampleQueriesVector", 
-    "allInOneVector", 
-    # "averageAllInOneVector",
-]
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='[%(asctime)s] - %(levelname)s - %(message)s')
+
+VECTOR_FIELDS = {
+    'r': "readmeVector", 
+    't': "titleVector", 
+    'k': "keyFeaturesVector", 
+    'd': "descriptionVector", 
+    's': "sampleQueriesVector", 
+    'o': "allInOneVector", 
+    'a': "averageAllInOneVector",
+}
+
+Configurations = {
+    "ada": {
+        "deployment_model": "text-embedding-ada-002",
+        "index": "cn-workloads-index-with-vectors"
+    },
+    "embedding3": {
+        "deployment_model": "text-embedding-3-small",
+        "index": "cn-workloads-index-with-vectors-embedding3"
+    },
+}
 
 fieldMap = {
     "id": ["id"],
@@ -178,7 +193,7 @@ def search_query_api(
         'top': top_k,
         # 'queryLanguage': 'en-us'
     }
-    print(request_url)
+    logging.info(f"Querying endpoint: {request_url}")
     if query_type == 'simple':
         request_payload['search'] = query
         request_payload['queryType'] = query_type
@@ -227,9 +242,8 @@ def search_query_api(
         "api-key": api_key
     }
 
-    print(f"request_payload: {request_payload.keys()}")
     retrieved_docs = requests.post(request_url, json = request_payload, headers = headers, timeout=None)
-    print(retrieved_docs)
+    logging.info(f"Query response status: {retrieved_docs.status_code}")
     if retrieved_docs.status_code == 200:
         return process_search_docs_response(retrieved_docs.json()["value"])
     else:
@@ -239,7 +253,7 @@ def search(queries: str, indexName: str, queryType: str, topK: int, semanticConf
     semanticConfiguration = semanticConfiguration if semanticConfiguration != "None" else None
     vectorFields = vectorFields if vectorFields != "None" else None
     embeddingModelName = embeddingModelName if embeddingModelName != None else None
-                
+
     # Do search.
     allOutputs = [search_query_api(
         "https://workloads.search.windows.net/", 
@@ -268,15 +282,85 @@ def search(queries: str, indexName: str, queryType: str, topK: int, semanticConf
     return includedOutputs
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description="Search workloads index",
+        usage="python3 test_prompt_flow.py [--vector_fields <rtkdsoa>] [--index <ada|emb3>] --query <query> [--output-mode <append|write>]"
+    )
+    
+    parser.add_argument(
+        "--index", 
+        type=str, 
+        help="Choose the index to use for the search, defaulted to index with ada-002 embeddings.", 
+        choices=["ada", "emb3"],
+        default="ada",
+    )
+
+    parser.add_argument(
+        "--vector-fields", 
+        type=str, 
+        help="""Choose the vector fields to use for the search with a string map, defaulted to 'r'.
+                Options map as follows:
+                r - readmeVector
+                t - titleVector
+                k - keyFeatures
+                d - descriptionVector
+                s - sampleQueriesVector
+                o - allInOneVector
+                a - averageAllInOneVector""",
+        default="r"
+    )
+
+    parser.add_argument(
+        "--query", 
+        type=str, 
+        help="The query to search for in the index.",
+        required=True
+    )
+
+    parser.add_argument(
+        "--output-mode",
+        type=str,
+        help="The mode to use for writing to file, either append or write.",
+        choices=["append", "write"],
+        default="write"
+    )
+
+    args = parser.parse_args()
+
+    selected_vector_fields = [VECTOR_FIELDS[char] for char in args.vector_fields if char in VECTOR_FIELDS]
+
+    if args.index not in Configurations:
+        config = "ada"
+    else:
+        config = args.index
+
+    logging.info(f"Selected vector fields: {selected_vector_fields}")
+    logging.info(f"Selected configuration: {config}")
+    logging.info(f"Selected query: {args.query}")
+
     recommendations = search(
-        embeddingModelName="text-embedding-ada-002",
-        indexName="cn-workloads-index-with-vectors",
-        queries="I am building a poker game as a JavaScript web app and I want to build a chatbot that uses real time game data and advises the player what their best move is. What services should I use for this?",
+        embeddingModelName=Configurations[config]["deployment_model"],
+        indexName=Configurations[config]["index"],
+        queries=args.query,
         queryType="vector",
         semanticConfiguration="one-word",
         sourceFilter=None,
         topK=10,
-        vectorFields=["readmeVector"],
+        vectorFields=selected_vector_fields,
     )
 
-    json.dump(recommendations, open("workloads_recommendations.json", "w"), indent=4)
+    data = {args.query: recommendations}
+
+    if args.output_mode == "append":
+        if os.path.exists("workloads_recommendations.json"):
+            with open("workloads_recommendations.json", "r") as f:
+                existing_data = json.load(f)
+                existing_data.update(data)
+            with open("workloads_recommendations.json", "w") as f:
+                json.dump(existing_data, f, indent=4)
+        else:
+            with open("workloads_recommendations.json", "w") as f:
+                json.dump(data, f, indent=4)
+    else:
+        with open("workloads_recommendations.json", "w") as f:
+            json.dump(data, f, indent=4)

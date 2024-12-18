@@ -1,0 +1,366 @@
+{
+    "I want to use azure open ai": [
+        {
+            "id": "94b2c974-76a2-4df6-b9a7-7a9dbc9b707f",
+            "title": "Setting up Azure OpenAI as a central capability within your organization",
+            "url": "https://github.com/Azure/enterprise-azureai",
+            "filepath": "https://github.com/Azure/enterprise-azureai",
+            "content": "Unleash the power of Azure AI to all your application developers in a secure & manageable way with Azure API Management and Azure Container Apps, utilizing Azure OpenAI PTUs across your organization with chargeback capabilities.",
+            "author": "Azure AI Content Team, Remco Brosky, Mick Vleeshouwer, Pascal van der Heiden",
+            "sourceType": "Azd",
+            "deploymentConfig": "{}",
+            "tech": "[\"Bicep\",\"Csharp\",\"Nodejs\",\"Bash\",\"Powershell\",\"Dockerfile\",\"Json\",\"Xml\",\".NET\"]",
+            "keyFeatures": "[\"Infrastructure-as-code\",\"CI/CD pipeline\",\"Secure Access Management\",\"Usage Monitoring & Cost Control\",\"Load Balance\",\"Streaming requests\",\"End-to-end sample\",\"Azure Redis Cache\",\"Secondary Azure OpenAI location\",\"Managed identities\",\"Virtual Network\",\"Azure Private DNS Zone\",\"Application Insights\",\"Log Analytics\",\"Azure Monitor Private Link Scope\",\"Private Endpoint\",\"Azure Container Apps\",\"Azure Container Registry\",\"Azure Cosmos DB\",\"Azure Key Vault\",\"Sample ChatApp\"]",
+            "chunk_id": "Setting up Azure OpenAI as a central capability within your organization",
+            "search_score": 0.03205128386616707,
+            "search_rerankerScore": null,
+            "deploymentOptions": [
+                "azcli",
+                "bicep"
+            ],
+            "tags": [
+                "bicep",
+                "apim",
+                "openai",
+                "ai",
+                "appinsights",
+                "monitor",
+                "enterprisepatterns",
+                "aca",
+                "dotnetCsharp",
+                "msft"
+            ],
+            "products": [
+                "Azure API Management",
+                "Azure Container Apps",
+                "Azure OpenAI"
+            ]
+        },
+        {
+            "id": "eebc5dce-43e7-4fc3-8b91-13573c8076df",
+            "title": "ChatGPT + Enterprise data with Azure OpenAI and AI Search",
+            "url": "https://github.com/Azure-Samples/azure-search-openai-demo",
+            "filepath": "https://github.com/Azure-Samples/azure-search-openai-demo",
+            "content": "A sample app for the Retrieval-Augmented Generation pattern running in Azure, using Azure AI Search for retrieval and Azure OpenAI large language models to power ChatGPT-style and Q&A experiences.",
+            "author": "Azure Content Team",
+            "sourceType": "Azd",
+            "deploymentConfig": "{}",
+            "tech": "[\"Python\",\"Typescript\",\"Nodejs\",\"Bicep\"]",
+            "keyFeatures": "[\"Chat (multi-turn) and Q&A (single turn) interfaces\",\"Renders citations and thought process for each answer\",\"Includes settings directly in the UI to tweak the behavior and experiment with options\",\"Integrates Azure AI Search for indexing and retrieval of documents, with support for many document formats as well as integrated vectorization\",\"Optional usage of GPT-4 with vision to reason over image-heavy documents\",\"Optional addition of speech input/output for accessibility\",\"Optional automation of user login and data access via Microsoft Entra\",\"Performance tracing and monitoring with Application Insights\"]",
+            "chunk_id": "ChatGPT + Enterprise data with Azure OpenAI and AI Search",
+            "search_score": 0.031159421429038048,
+            "search_rerankerScore": null,
+            "deploymentOptions": [
+                "azcli",
+                "bicep"
+            ],
+            "tags": [
+                "openai",
+                "gpt",
+                "aisearch",
+                "python",
+                "typescript",
+                "bicep",
+                "nodejs",
+                "ai",
+                "msft",
+                "popular",
+                "blobstorage",
+                "appservice",
+                "aicollection",
+                "speechservice"
+            ],
+            "products": [
+                "Azure OpenAI",
+                "Azure Cognitive Search",
+                "Azure Blob Storage",
+                "Azure Monitor",
+                "Azure App Service"
+            ]
+        },
+        {
+            "id": "f343a991-c4a1-4edb-bd4f-c0b05aadf26e",
+            "title": "ChatGPT and RAG with Azure OpenAI and AI Search for JavaScript",
+            "url": "https://github.com/Azure-Samples/azure-search-openai-javascript",
+            "filepath": "https://github.com/Azure-Samples/azure-search-openai-javascript",
+            "content": "A reference sample to build Retrieval Augmented Generation applications using Azure AI Search and Azure OpenAI.",
+            "author": "JavaScript Advocacy Team, Natalia Venditto, Shibani Basava",
+            "sourceType": "Azd",
+            "deploymentConfig": "{}",
+            "tech": "[\"Bicep\",\"Javascript\",\"Node.js\",\"Typescript\"]",
+            "keyFeatures": "[\"Chat and Q&A interfaces\",\"Evaluates trustworthiness of responses with citations and source tracking\",\"Data preparation, prompt construction, and interaction orchestration between ChatGPT and Azure AI Search\",\"Settings in UX to tweak behavior and experiment with options\",\"Optional performance tracing and monitoring with Application Insights\",\"Sample data for end-to-end application trials\",\"Search service for search and retrieval capabilities\",\"Indexer service for data indexing\",\"Frontend web app for user interface and backend service interaction\",\"Multiple deployment methods: GitHub Codespaces, VS Code Remote Containers, Local environment\",\"Azure resources deployment with cost estimation guidelines\",\"Environment sharing and authentication setup\",\"Clean up resources with azd down command\"]",
+            "chunk_id": "ChatGPT and RAG with Azure OpenAI and AI Search for JavaScript",
+            "search_score": 0.030330881476402283,
+            "search_rerankerScore": null,
+            "deploymentOptions": [
+                "azcli",
+                "bicep"
+            ],
+            "tags": [
+                "ai",
+                "bicep",
+                "gpt",
+                "aisearch",
+                "javascript",
+                "nodejs",
+                "openai",
+                "typescript",
+                "webcomponents",
+                "microfrontend",
+                "msft",
+                "aicollection",
+                "rag"
+            ],
+            "products": [
+                "Azure OpenAI Service",
+                "Azure Cognitive Search",
+                "Azure Container Apps",
+                "Azure Static Web Apps",
+                "Azure Blob Storage",
+                "Azure Monitor"
+            ]
+        },
+        {
+            "id": "51b84127-0563-45c3-b2d2-03a66433ca70",
+            "title": "Azure AI Starter",
+            "url": "https://github.com/Azure-Samples/azd-ai-starter",
+            "filepath": "https://github.com/Azure-Samples/azd-ai-starter",
+            "content": "Bicep template that deploys Azure AI services with configured machine learning models.",
+            "author": "Azure Dev",
+            "sourceType": "Azd",
+            "deploymentConfig": "{}",
+            "tech": "[\"Bicep\"]",
+            "keyFeatures": "[\"Deploys Azure AI services\",\"Configured machine learning models\",\"Uses Bicep templates\",\"Supports GitHub Codespaces\",\"VS Code Dev Containers integration\",\"Quickstart instructions available\",\"Supports local environment setup\",\"Extending Bicep IaC files\",\"Region availability guidance\",\"Quota check scripts\",\"Cost estimation with Azure's pricing calculator\",\"Managed Identity or Key Vault integration\",\"Security scanning with GitHub Action tool\"]",
+            "chunk_id": "Azure AI Starter",
+            "search_score": 0.030117753893136978,
+            "search_rerankerScore": null,
+            "deploymentOptions": [
+                "azcli",
+                "bicep"
+            ],
+            "tags": [
+                "bicep",
+                "ai",
+                "azureai",
+                "openai",
+                "msft"
+            ],
+            "products": [
+                "Azure AI"
+            ]
+        },
+        {
+            "id": "892c1998-ab31-4592-a453-8c8ec947df6a",
+            "title": "Contoso Chat Retail with Azure AI Studio and Promptflow",
+            "url": "https://github.com/Azure-Samples/contoso-chat",
+            "filepath": "https://github.com/Azure-Samples/contoso-chat",
+            "content": "This sample has the full End2End process of creating RAG application with Prompt Flow and AI Studio. It includes GPT 3.5 Turbo LLM application code, evaluations, deployment automation with AZD CLI, GitHub actions for evaluation and deployment and intent mapping for multiple LLM task mapping.",
+            "author": "Azure Content Team",
+            "sourceType": "Azd",
+            "deploymentConfig": "{}",
+            "tech": "[\"Python\",\"Bicep\",\"Prompty\"]",
+            "keyFeatures": "[\"Azure OpenAI for embeddings, chat, and evaluation models\",\"Prompty for creating and managing prompts for rapid ideation\",\"Azure AI Search for performing semantic similarity search\",\"Azure CosmosDB for storing customer orders in a noSQL database\",\"Azure Container Apps for hosting the chat AI endpoint on Azure\",\"Sample product and customer data for rapid prototyping\",\"Sample application code for chat and evaluation workflows\",\"Sample datasets and custom evaluators using prompty assets\",\"AI-assisted evaluation flows for chat response quality\",\"Provision and deploy the solution using the Azure Developer CLI\",\"Support for Responsible AI practices with content safety and assessments\"]",
+            "chunk_id": "Contoso Chat Retail with Azure AI Studio and Promptflow",
+            "search_score": 0.029631255194544792,
+            "search_rerankerScore": null,
+            "deploymentOptions": [
+                "azcli",
+                "bicep"
+            ],
+            "tags": [
+                "msft",
+                "aicollection",
+                "python",
+                "openai",
+                "aistudio",
+                "bicep",
+                "cosmosdb",
+                "aisearch",
+                "ai",
+                "rag"
+            ],
+            "products": [
+                "Azure OpenAI",
+                "Azure AI Search",
+                "Azure Cosmos DB",
+                "Azure Container Apps"
+            ]
+        },
+        {
+            "id": "88bce5a4-8e70-4c83-a87c-4d68e34eaf7e",
+            "title": "ChatGPT + Enterprise data with Azure OpenAI and AI Search",
+            "url": "https://github.com/Azure-Samples/azure-search-openai-demo",
+            "filepath": "https://github.com/Azure-Samples/azure-search-openai-demo",
+            "content": "A sample app for the Retrieval-Augmented Generation pattern running in Azure, using Azure AI Search for retrieval and Azure OpenAI large language models to power ChatGPT-style and Q&A experiences.",
+            "author": "Microsoft",
+            "sourceType": "Azd",
+            "deploymentConfig": "{}",
+            "tech": "[\"Python\"]",
+            "keyFeatures": "[\"Chat (multi-turn) and Q&A (single turn) interfaces\",\"Renders citations and thought process for each answer\",\"Includes settings directly in the UI to tweak the behavior and experiment with options\",\"Integrates Azure AI Search for indexing and retrieval of documents\",\"Supports many document formats as well as integrated vectorization\",\"Optional usage of GPT-4 with vision to reason over image-heavy documents\",\"Optional addition of speech input/output for accessibility\",\"Optional automation of user login and data access via Microsoft Entra\",\"Performance tracing and monitoring with Application Insights\"]",
+            "chunk_id": "ChatGPT + Enterprise data with Azure OpenAI and AI Search",
+            "search_score": 0.016393441706895828,
+            "search_rerankerScore": null,
+            "deploymentOptions": [
+                "azcli"
+            ],
+            "tags": [
+                "OpenAI",
+                "Azure",
+                "AI Search",
+                "ChatGPT",
+                "Enterprise"
+            ],
+            "products": [
+                "Azure OpenAI",
+                "Azure Cognitive Search",
+                "Azure App Service",
+                "Azure Blob Storage",
+                "Azure Monitor"
+            ]
+        },
+        {
+            "id": "b33ac45a-f158-449d-8933-29f998143284",
+            "title": ".NET AI samples with Azure OpenAI",
+            "url": "https://github.com/dotnet/ai-samples",
+            "filepath": "https://github.com/dotnet/ai-samples",
+            "content": ".NET samples demonstrating how to use AI in your .NET applications. Each sample demonstrate a specific AI scenario with only a few lines of code. It consists of a console application, running locally, that will send request(s) to an Azure OpenAI Service deployed in your Azure subscription",
+            "author": "Frank Boucher",
+            "sourceType": "Azd",
+            "deploymentConfig": "{}",
+            "tech": "[\"Bicep\",\"C#\"]",
+            "keyFeatures": "[\"Demonstrates AI scenarios with .NET applications\",\"Uses Azure OpenAI Service\",\"Console applications running locally\",\"Tutorials for integrating AI into .NET apps\",\"Examples on using Semantic Kernel\",\"Quickstarts with OpenAI and Azure OpenAI SDK\",\"Chat application samples\",\"LLM core concepts\",\"End-to-End examples\",\"Local model implementation\",\"Vector databases and tokenizers\",\"Part of .NET Foundation\",\"MIT licensed\"]",
+            "chunk_id": ".NET AI samples with Azure OpenAI",
+            "search_score": 0.016393441706895828,
+            "search_rerankerScore": null,
+            "deploymentOptions": [
+                "azcli",
+                "bicep"
+            ],
+            "tags": [
+                "ai",
+                "openai",
+                "dotnetCsharp",
+                "azureai",
+                "msft",
+                "gpt",
+                "dall-e",
+                "semantickernel",
+                "bicep"
+            ],
+            "products": [
+                "Azure AI Services",
+                "Azure OpenAI"
+            ]
+        },
+        {
+            "id": "3450a16f-3b71-48ba-9bd5-c6568f105300",
+            "title": "Chat with your Data Solution Accelerator",
+            "url": "https://github.com/Azure-Samples/chat-with-your-data-solution-accelerator",
+            "filepath": "https://github.com/Azure-Samples/chat-with-your-data-solution-accelerator",
+            "content": "A Solution Accelerator for the RAG pattern running in Azure, using Azure AI Search for retrieval and Azure OpenAI large language models to power ChatGPT-style and Q&A experiences. This includes most common requirements and best practices.",
+            "author": "Azure Content Team",
+            "sourceType": "Azd",
+            "deploymentConfig": "{}",
+            "tech": "[\"Bicep\",\"Python\",\"Typescript\",\"Flask\"]",
+            "keyFeatures": "[\"Private LLM access on your data\",\"Single application access to your full data set\",\"Natural language interaction with your unstructured data\",\"Easy access to source documentation when querying\",\"Data upload\",\"Accessible orchestration\"]",
+            "chunk_id": "Chat with your Data Solution Accelerator",
+            "search_score": 0.016129031777381897,
+            "search_rerankerScore": null,
+            "deploymentOptions": [
+                "azcli",
+                "bicep"
+            ],
+            "tags": [
+                "bicep",
+                "python",
+                "typescript",
+                "flask",
+                "aisearch",
+                "openai",
+                "gpt",
+                "ai",
+                "msft",
+                "rag"
+            ],
+            "products": [
+                "Azure OpenAI",
+                "Azure Cognitive Search",
+                "Azure App Service",
+                "Azure Bot Service",
+                "Azure Document Intelligence",
+                "Azure Functions",
+                "Azure Storage Accounts",
+                "Azure Speech Service",
+                "Azure Cosmos DB"
+            ]
+        },
+        {
+            "id": "8e07cf1a-0aba-41b2-9595-ce1ff8b2f167",
+            "title": "Simple Chat Application using Azure OpenAI (Python)",
+            "url": "https://github.com/Azure-Samples/openai-chat-app-quickstart",
+            "filepath": "https://github.com/Azure-Samples/openai-chat-app-quickstart",
+            "content": "Build a chat application using Azure OpenAI GPT models.",
+            "author": "Azure Content Team",
+            "sourceType": "Azd",
+            "deploymentConfig": "{}",
+            "tech": "[\"Python\",\"Quart\",\"Bicep\",\"OpenAI\"]",
+            "keyFeatures": "[\"Python app using Azure OpenAI to generate responses to user messages\",\"Provisioning Azure OpenAI resources and deploying the app to Azure Container Apps using Azure Developer CLI\",\"Managed identity for authenticating with Azure OpenAI\",\"Uses Quart framework and openai package for backend functionality\",\"Includes a basic HTML/JS frontend that streams responses using JSON Lines over a ReadableStream\",\"Bicep files for provisioning various Azure resources\",\"Support for GitHub Codespaces and VS Code Dev Containers for development\",\"Deployment guidance with Azure account setup and azd command\",\"Continuous deployment setup with GitHub Actions\",\"Cost management and security guidelines included\"]",
+            "chunk_id": "Simple Chat Application using Azure OpenAI (Python)",
+            "search_score": 0.016129031777381897,
+            "search_rerankerScore": null,
+            "deploymentOptions": [
+                "azcli",
+                "bicep"
+            ],
+            "tags": [
+                "msft",
+                "aicollection",
+                "python",
+                "openai",
+                "aca",
+                "bicep",
+                "ai"
+            ],
+            "products": [
+                "Azure OpenAI",
+                "Azure Container Apps",
+                "Azure Container Registry",
+                "Azure Log Analytics"
+            ]
+        },
+        {
+            "id": "adbc2d95-6bb8-4b0d-b0cb-2c0f34c19c11",
+            "title": "Multi-repo ChatGPT and Enterprise data with Azure OpenAI and AI Search",
+            "url": "https://github.com/Azure/GPT-RAG",
+            "filepath": "https://github.com/Azure/GPT-RAG",
+            "content": "Azure OpenAI at scale in a secure manner.",
+            "author": "Azure Content Team",
+            "sourceType": "Azd",
+            "deploymentConfig": "{}",
+            "tech": "[\"Python\",\"Typescript\",\"Nodejs\",\"Bicep\"]",
+            "keyFeatures": "[\"Retrieval-Augmented Generation pattern\",\"Azure AI Search for retrieval\",\"Azure OpenAI large language models\",\"Zero-trust security\",\"Responsible AI\",\"Enterprise-grade deployment\",\"Modular architecture with data ingestion, orchestrator, and app front-end\",\"Quick setup options with Azure Developer CLI\",\"Basic Architecture Deployment for quick demos\",\"Zero Trust Architecture Deployment for secure environments\",\"Integration with Azure services\",\"Customizable deployment settings\",\"Multi-environment CI/CD deployment guides\",\"Performance testing guide\",\"Conversation data querying and analysis\",\"Governance and pricing models\"]",
+            "chunk_id": "Multi-repo ChatGPT and Enterprise data with Azure OpenAI and AI Search",
+            "search_score": 0.01587301678955555,
+            "search_rerankerScore": null,
+            "deploymentOptions": [
+                "azcli",
+                "bicep"
+            ],
+            "tags": [
+                "openai",
+                "gpt",
+                "aisearch",
+                "python",
+                "typescript",
+                "bicep",
+                "nodejs",
+                "ai",
+                "msft"
+            ],
+            "products": [
+                "Azure OpenAI",
+                "Azure Cognitive Search"
+            ]
+        }
+    ]
+}
