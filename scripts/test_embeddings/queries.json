@@ -1,0 +1,317 @@
+[
+    {
+        "userMessage": "I want to create a website based on python",
+        "rating": "positive",
+        "recommendation": "React Web App with Python API and MongoDB - Terraform",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": "Python (Flask) Web App with PostgreSQL in VNet"
+    },
+    {
+        "userMessage": "create native azure template",
+        "rating": "positive",
+        "recommendation": "Bicep template to bootstrap Azure Deployment Environments",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": "Bicep template to bootstrap Azure Deployment Environments"
+    },
+    {
+        "userMessage": "I want to create a chatbot",
+        "rating": "positive",
+        "recommendation": "Simple Chat Application using Azure OpenAI (Python)",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": "Simple Chat Application using Azure OpenAI"
+    },
+    {
+        "userMessage": "develop a web scraping service hosted on a VM that scrapes and stores data into an RDBMS or Cosmos DB",
+        "rating": "negative",
+        "recommendation": "Containerized React Web App with Python API and MongoDB",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": "Quickstart: Use the Azure CLI to create an Ubuntu Virtual Machine and attach an Azure Data Disk"
+    },
+    {
+        "userMessage": "Create an AKS cluster with NGINX ingress controller, custom domain, 2 master nodes, 1 worker node, medium size, production scenario, support for new ACR, Istio, and secure network with Calico",
+        "rating": "negative",
+        "recommendation": "Deploy a Scalable & Secure Azure Kubernetes Service cluster using the Azure CLI",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": "Dynamic Configuration for AKS workloads (w/o changing ConfigMaps or with Azure App Configuration)"
+    },
+    {
+        "userMessage": "I want to create a data mesh with example data",
+        "rating": "negative",
+        "recommendation": "Serverless Azure OpenAI Quick Start with LlamaIndex (Python)",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": "Azure OpenAI Conference Session Recommender"
+    },
+    {
+        "userMessage": "I want to do development of a triptokerala app with the help of dotnet sql and angular. The app also uses Ai assistant.",
+        "rating": "negative",
+        "recommendation": ".NET AI samples with Azure OpenAI",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": "React Web App with C# API and SQL Database "
+    },
+    {
+        "userMessage": "set up a simple docker app that has a react app with nodejs and Microsoft Dataverse for database",
+        "rating": "negative",
+        "recommendation": "Containerized React Web App with Node.js API and MongoDB",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": "Containerized React Web App with Node.js API and MongoDB"
+    },
+    {
+        "userMessage": "create an application AI application that can help dyslexic people",
+        "rating": "",
+        "recommendation": "Serverless Azure OpenAI Assistant Quick Start with Function Calling",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "Deploy streamlit app",
+        "rating": "",
+        "recommendation": "Containerized React Web App with Python API and MongoDB",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "deploy AI speech service",
+        "rating": "",
+        "recommendation": "NLP to SQL In-A-Box",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "create a sample python app that does gene chat using a small gen ai model, like get-4o-mini",
+        "rating": "",
+        "recommendation": "Chat + Vision using Azure OpenAI",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "Create an AI app to distribute to our employees",
+        "rating": "",
+        "recommendation": "Build a Copilot app using Azure Cosmos DB, Azure OpenAI Service and Azure App Service",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "I want to use Azure functions to build an OpenAI application",
+        "rating": "",
+        "recommendation": "Azure Functions - Chat using ChatGPT (Python v2 Function)",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "bot template for the bot I just created",
+        "rating": "",
+        "recommendation": "Contoso Chat Retail with Azure AI Studio and Promptflow",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "I need to use a RAG by open AI gpt 4 and deploy it to the web for my team use",
+        "rating": "",
+        "recommendation": "Azure OpenAI RAG Chat Experience with Node.js",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "I want to write a chatbot using AI",
+        "rating": "",
+        "recommendation": "Simple Chat Application using Azure OpenAI (Python)",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "I want to create a chat bot to be used in teams",
+        "rating": "",
+        "recommendation": "Simple Chat Application using Azure OpenAI (Python)",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "deploy my elearning application using django as development language and mysql as database and a deep learning ai model",
+        "rating": "",
+        "recommendation": "Python (Django) Web App with PostgreSQL in VNet",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "deploy a new web api",
+        "rating": "",
+        "recommendation": "React Web App with C# API and SQL Database ",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "I want to create a web application that only users within my tenant can access. The front end of the web application will be built using React framework. The back end of the application will be built using a .NET Core API. There will be a SQL Server database to store data for the application. Users must authenticate via Entra. Source code is hosted locally.",
+        "rating": "",
+        "recommendation": "React Web App with C# API and SQL Database ",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "I want to deploy my node site with nginx",
+        "rating": "",
+        "recommendation": "Static React Web App + Functions with Node.js API and MongoDB",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "deploy a fastapi webapp using postgresql for a RAG chatbot answering questions from documents uploaded by user, and giving the sources of the answer with by showing the location in the document",
+        "rating": "",
+        "recommendation": "RAG on PostgreSQL",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "I have a django backend, react frontend and nginx. best way to deploy",
+        "rating": "",
+        "recommendation": "Containerized React Web App with Python API and MongoDB",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "I want to build an ai calling agent, which converts call transcript to text and Analize it and emails the report",
+        "rating": "",
+        "recommendation": "Process Automation: Speech to Text and Summarization with AI Studio",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "I want to build an AI application",
+        "rating": "",
+        "recommendation": "Azure AI Studio Starter",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "create a tool like DevOps MOP reviewer that automatically reviews and shares the MOP review result",
+        "rating": "",
+        "recommendation": "Build a Copilot app using Azure Cosmos DB, Azure OpenAI Service and Azure App Service",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "deploy maven in kubernetes",
+        "rating": "",
+        "recommendation": "Microservices App - Dapr PubSub Java AKS",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "I want to deploy the open ai model",
+        "rating": "",
+        "recommendation": "Azure AI Studio Starter",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "deploy a gpt-4 model to test vision",
+        "rating": "",
+        "recommendation": "GPT Video Analysis-In-A-Box",
+        "opened": "OpenedRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "I want to create a react native app and use azure to host it",
+        "rating": "negative",
+        "recommendation": "React Web App with C# API and SQL Database ",
+        "opened": "DidNotOpenRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "I have a new developer who will work on Azure Functions, Event Hub, Docker, DevOps, and WebApp NodeJS. How do I get him started?",
+        "rating": "negative",
+        "recommendation": "Azure Function with Event Hub with optional virtual network capabilities",
+        "opened": "DidNotOpenRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "Create a AKS cluster, PostgreSQL server and Storage account. Deploy UI and Backend pod on AKS. Create Let's encrypt SSL certificate Configure AKS cluster in way that we are to access UI pod through SSL certificate.",
+        "rating": "negative",
+        "recommendation": "Deploy a Scalable & Secure Azure Kubernetes Service cluster using the Azure CLI",
+        "opened": "DidNotOpenRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "To host the trading bot on Azure, use Azure Kubernetes Service (AKS) for scalable container orchestration, coupled with Azure Key Vault for securely managing API keys and wallet credentials. Add Azure SQL Database for metrics storage, Azure Cache for Redis for real-time market data caching, and Azure Monitor for performance tracking.",
+        "rating": "negative",
+        "recommendation": "Kubernetes React Web App with Node.js API and MongoDB",
+        "opened": "DidNotOpenRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "I want to deploy my python web application",
+        "rating": "negative",
+        "recommendation": "Python (Django) Web App with PostgreSQL via Azure Container Apps",
+        "opened": "DidNotOpenRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "deploy a webapp",
+        "rating": "negative",
+        "recommendation": "Quickstart: Building your first static site with the Azure Static Web Apps using the CLI",
+        "opened": "DidNotOpenRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "I'm building an application on .net that will use telegram api and connect to azure cosmos db. in linux world its done using docker.",
+        "rating": "negative",
+        "recommendation": "React Web App with C# API and MongoDB",
+        "opened": "DidNotOpenRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "setup drupal 10 website on azure",
+        "rating": "negative",
+        "recommendation": "WordPress with Azure Container Apps",
+        "opened": "DidNotOpenRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "view onboarding templates",
+        "rating": "negative",
+        "recommendation": "Bicep template to bootstrap Azure Deployment Environments",
+        "opened": "DidNotOpenRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "deploy postgresql server for demo product",
+        "rating": "negative",
+        "recommendation": "PostgreSQL + Pgvector",
+        "opened": "DidNotOpenRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "I want to build a triptokerala app with the help of dotnet sql and angular. The app also uses Ai assistant",
+        "rating": "negative",
+        "recommendation": ".NET AI samples with Azure OpenAI",
+        "opened": "DidNotOpenRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "I want a docker",
+        "rating": "",
+        "recommendation": "Azure Kubernetes Service Store Demo",
+        "opened": "DidNotOpenRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "I want to create a containerised app",
+        "rating": "",
+        "recommendation": "Containerized Apps on Azure Kubernetes Service",
+        "opened": "DidNotOpenRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "I want to build an AI application.",
+        "rating": "",
+        "recommendation": "Azure AI Studio Starter",
+        "opened": "DidNotOpenRecommendation",
+        "humanAnnotation": ""
+    },
+    {
+        "userMessage": "My application needs help processing real-time events.",
+        "rating": "",
+        "recommendation": "Azure Function with Event Hub with optional virtual network capabilities",
+        "opened": "DidNotOpenRecommendation",
+        "humanAnnotation": ""
+    }
+]

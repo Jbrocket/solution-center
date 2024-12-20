@@ -1,0 +1,64 @@
+{
+    "set up a simple docker app that has a react app with nodejs and Microsoft Dataverse for database": [
+        {
+            "title": "Containerized React Web App with Node.js API and MongoDB",
+            "source": "https://github.com/Azure-Samples/todo-nodejs-mongo-aca",
+            "search_score": 0.8567826,
+            "search_rerankerScore": null
+        },
+        {
+            "title": "React Web App with Node.js API and MongoDB",
+            "source": "https://github.com/Azure-Samples/todo-nodejs-mongo",
+            "search_score": 0.8512938,
+            "search_rerankerScore": null
+        },
+        {
+            "title": "Kubernetes React Web App with Node.js API and MongoDB",
+            "source": "https://github.com/Azure-Samples/todo-nodejs-mongo-aks",
+            "search_score": 0.84947175,
+            "search_rerankerScore": null
+        },
+        {
+            "title": "Kubernetes React Web App with Node.js API and MongoDB",
+            "source": "https://github.com/Azure-Samples/todo-nodejs-mongo-aks",
+            "search_score": 0.84947175,
+            "search_rerankerScore": null
+        },
+        {
+            "title": "Microservices App - Dapr Bindings Cron Node.js ACA PostgreSQL",
+            "source": "https://github.com/Azure-Samples/bindings-dapr-nodejs-cron-postgres",
+            "search_score": 0.8477156,
+            "search_rerankerScore": null
+        },
+        {
+            "title": "React Web App with Node.js API and MongoDB - Terraform",
+            "source": "https://github.com/Azure-Samples/todo-nodejs-mongo-terraform",
+            "search_score": 0.84754366,
+            "search_rerankerScore": null
+        },
+        {
+            "title": "Containerized React Web App with Java API and MongoDB",
+            "source": "https://github.com/Azure-Samples/todo-java-mongo-aca",
+            "search_score": 0.8462284,
+            "search_rerankerScore": null
+        },
+        {
+            "title": "Microservices App - Dapr Service Invoke Node.js ACA",
+            "source": "https://github.com/Azure-Samples/svc-invoke-dapr-nodejs",
+            "search_score": 0.84615296,
+            "search_rerankerScore": null
+        },
+        {
+            "title": "Static React Web App + Functions with Node.js API and MongoDB",
+            "source": "https://github.com/Azure-Samples/todo-nodejs-mongo-swa-func",
+            "search_score": 0.843591,
+            "search_rerankerScore": null
+        },
+        {
+            "title": "React Web App with C# API and MongoDB",
+            "source": "https://github.com/Azure-Samples/todo-csharp-cosmos-sql",
+            "search_score": 0.84078014,
+            "search_rerankerScore": null
+        }
+    ]
+}

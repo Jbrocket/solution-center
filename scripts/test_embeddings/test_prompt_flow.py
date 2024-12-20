@@ -26,6 +26,22 @@ Configurations = {
     },
 }
 
+searchConfigurations = [
+    "vectorSemanticHybrid",
+    "semntic",
+    "vector"
+]
+
+SemanticFields = {
+    "t": "title",
+    "d": "description",
+    "k": "keyFeatures",
+    "s": "sampleQueries",
+    "t": "tags",
+    "p": "products",
+    "f": "tech"
+}
+
 fieldMap = {
     "id": ["id"],
     "title": ["title"],
@@ -194,6 +210,7 @@ def search_query_api(
         # 'queryLanguage': 'en-us'
     }
     logging.info(f"Querying endpoint: {request_url}")
+    logging.info(f"Query type: {query_type}")
     if query_type == 'simple':
         request_payload['search'] = query
         request_payload['queryType'] = query_type
@@ -242,6 +259,15 @@ def search_query_api(
         "api-key": api_key
     }
 
+    temp_vectors = []
+    for vector_query in request_payload.get("vectorQueries", []):
+        temp_vectors.append(vector_query["vector"])
+        vector_query.pop("vector")
+
+    logging.info(f"Querying with payload: {request_payload}")
+    for i, vector_query in enumerate(request_payload.get("vectorQueries", [])):
+        vector_query["vector"] = temp_vectors[i]
+
     retrieved_docs = requests.post(request_url, json = request_payload, headers = headers, timeout=None)
     logging.info(f"Query response status: {retrieved_docs.status_code}")
     if retrieved_docs.status_code == 200:
@@ -286,7 +312,7 @@ if __name__ == "__main__":
         description="Search workloads index",
         usage="python3 test_prompt_flow.py [--vector_fields <rtkdsoa>] [--index <ada|emb3>] --query <query> [--output-mode <append|write>]"
     )
-    
+
     parser.add_argument(
         "--index", 
         type=str, 
@@ -325,9 +351,40 @@ if __name__ == "__main__":
         default="write"
     )
 
+    parser.add_argument(
+        "--output-file",
+        type=str,
+        help="The file to write the output to.",
+        default="workloads_recommendations.json"
+    )
+
+    parser.add_argument(
+        "--semantic-config",
+        type=str,
+        help="The semantic configuration to use for the search.",
+        choices=searchConfigurations,
+        default="vectorSemanticHybrid"
+    )
+
+    parser.add_argument(
+        "--semantic-fields",
+        type=str,
+        help="""Choose the semantic fields to use for the search with a string map, defaulted to 'tdk'.
+                Options map as follows:
+                t - title
+                d - description
+                k - keyFeatures
+                s - sampleQueries
+                t - tags
+                p - products
+                f - tech""",
+        default=""
+    )
+
     args = parser.parse_args()
 
     selected_vector_fields = [VECTOR_FIELDS[char] for char in args.vector_fields if char in VECTOR_FIELDS]
+    selected_semantic_fields = [SemanticFields[char] for char in args.semantic_fields if char in SemanticFields]
 
     if args.index not in Configurations:
         config = "ada"
@@ -342,25 +399,36 @@ if __name__ == "__main__":
         embeddingModelName=Configurations[config]["deployment_model"],
         indexName=Configurations[config]["index"],
         queries=args.query,
-        queryType="vector",
+        queryType=args.semantic_config,
         semanticConfiguration="one-word",
         sourceFilter=None,
         topK=10,
         vectorFields=selected_vector_fields,
     )
 
-    data = {args.query: recommendations}
-
+    data = {}
+    for recommendation in recommendations:
+        query_key = args.query
+        if query_key not in data:
+            data[query_key] = []
+        data[query_key].append({
+            "title": recommendation["title"],
+            "source": recommendation["url"],
+            "search_score": recommendation["search_score"],
+            "search_rerankerScore": recommendation["search_rerankerScore"]
+        })
     if args.output_mode == "append":
-        if os.path.exists("workloads_recommendations.json"):
-            with open("workloads_recommendations.json", "r") as f:
+        if os.path.exists(args.output_file):
+            with open(args.output_file, "r") as f:
                 existing_data = json.load(f)
                 existing_data.update(data)
-            with open("workloads_recommendations.json", "w") as f:
+            with open(args.output_file, "w") as f:
                 json.dump(existing_data, f, indent=4)
         else:
-            with open("workloads_recommendations.json", "w") as f:
+            with open(args.output_file, "w") as f:
                 json.dump(data, f, indent=4)
+        logging.info(f"Appended to {args.output_file}.")
     else:
-        with open("workloads_recommendations.json", "w") as f:
+        with open(args.output_file, "w") as f:
             json.dump(data, f, indent=4)
+        logging.info(f"Wrote to {args.output_file}.")
