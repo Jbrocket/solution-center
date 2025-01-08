@@ -1,64 +1,64 @@
 {
-    "set up a simple docker app that has a react app with nodejs and Microsoft Dataverse for database": [
+    "use github openAI api to integrate and host python assistant in app service": [
         {
-            "title": "Containerized React Web App with Node.js API and MongoDB",
-            "source": "https://github.com/Azure-Samples/todo-nodejs-mongo-aca",
-            "search_score": 0.8567826,
-            "search_rerankerScore": null
+            "title": "ChatGPT + Enterprise data with Azure OpenAI and AI Search",
+            "source": "https://github.com/Azure-Samples/azure-search-openai-demo",
+            "search_score": 0.02736726962029934,
+            "search_rerankerScore": 2.141278028488159
         },
         {
-            "title": "React Web App with Node.js API and MongoDB",
-            "source": "https://github.com/Azure-Samples/todo-nodejs-mongo",
-            "search_score": 0.8512938,
-            "search_rerankerScore": null
+            "title": "Chat with your Data Solution Accelerator",
+            "source": "https://github.com/Azure-Samples/chat-with-your-data-solution-accelerator",
+            "search_score": 0.02332327701151371,
+            "search_rerankerScore": 2.040409564971924
         },
         {
-            "title": "Kubernetes React Web App with Node.js API and MongoDB",
-            "source": "https://github.com/Azure-Samples/todo-nodejs-mongo-aks",
-            "search_score": 0.84947175,
-            "search_rerankerScore": null
+            "title": "Azure Kubernetes Service Store Demo",
+            "source": "https://github.com/azure-samples/aks-store-demo",
+            "search_score": 0.010204081423580647,
+            "search_rerankerScore": 2.034738063812256
         },
         {
-            "title": "Kubernetes React Web App with Node.js API and MongoDB",
-            "source": "https://github.com/Azure-Samples/todo-nodejs-mongo-aks",
-            "search_score": 0.84947175,
-            "search_rerankerScore": null
+            "title": "RAG on PostgreSQL",
+            "source": "https://github.com/Azure-Samples/rag-postgres-openai-python",
+            "search_score": 0.011111111380159855,
+            "search_rerankerScore": 2.020825147628784
         },
         {
-            "title": "Microservices App - Dapr Bindings Cron Node.js ACA PostgreSQL",
-            "source": "https://github.com/Azure-Samples/bindings-dapr-nodejs-cron-postgres",
-            "search_score": 0.8477156,
-            "search_rerankerScore": null
+            "title": "Azure Functions - Chat using ChatGPT (Python v2 Function)",
+            "source": "https://github.com/Azure-Samples/function-python-ai-openai-chatgpt",
+            "search_score": 0.02747976779937744,
+            "search_rerankerScore": 2.0167486667633057
         },
         {
-            "title": "React Web App with Node.js API and MongoDB - Terraform",
-            "source": "https://github.com/Azure-Samples/todo-nodejs-mongo-terraform",
-            "search_score": 0.84754366,
-            "search_rerankerScore": null
+            "title": "Azure Kubernetes Service Store Demo",
+            "source": "https://github.com/azure-samples/aks-store-demo",
+            "search_score": 0.012500000186264515,
+            "search_rerankerScore": 2.0110771656036377
         },
         {
-            "title": "Containerized React Web App with Java API and MongoDB",
-            "source": "https://github.com/Azure-Samples/todo-java-mongo-aca",
-            "search_score": 0.8462284,
-            "search_rerankerScore": null
+            "title": "Simple Chat Application using Azure OpenAI (Python)",
+            "source": "https://github.com/Azure-Samples/openai-chat-app-quickstart",
+            "search_score": 0.03201844170689583,
+            "search_rerankerScore": 2.0076210498809814
         },
         {
-            "title": "Microservices App - Dapr Service Invoke Node.js ACA",
-            "source": "https://github.com/Azure-Samples/svc-invoke-dapr-nodejs",
-            "search_score": 0.84615296,
-            "search_rerankerScore": null
+            "title": "Azure OpenAI Conference Session Assistant",
+            "source": "https://github.com/Azure-Samples/azure-sql-db-session-recommender-v2",
+            "search_score": 0.009615384973585606,
+            "search_rerankerScore": 2.0004429817199707
         },
         {
-            "title": "Static React Web App + Functions with Node.js API and MongoDB",
-            "source": "https://github.com/Azure-Samples/todo-nodejs-mongo-swa-func",
-            "search_score": 0.843591,
-            "search_rerankerScore": null
+            "title": "Build a Copilot app using Azure Cosmos DB, Azure OpenAI Service and Azure App Service",
+            "source": "https://github.com/AzureCosmosDB/cosmosdb-nosql-copilot",
+            "search_score": 0.01666666753590107,
+            "search_rerankerScore": 1.989720344543457
         },
         {
-            "title": "React Web App with C# API and MongoDB",
-            "source": "https://github.com/Azure-Samples/todo-csharp-cosmos-sql",
-            "search_score": 0.84078014,
-            "search_rerankerScore": null
+            "title": "Simple Chat Application using Azure OpenAI",
+            "source": "https://github.com/Azure-Samples/chatgpt-quickstart",
+            "search_score": 0.029487181454896927,
+            "search_rerankerScore": 1.983162760734558
         }
     ]
 }

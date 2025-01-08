@@ -1,0 +1,23 @@
+{
+    "ada_vector_o": 27,
+    "ada_vector_r": 27,
+    "ada_vector_rtds": 25,
+    "ada_vector_k": 22,
+    "ada_vector_ktds": 24,
+    "ada_vectorSemanticHybrid_o": 17,
+    "ada_vectorSemanticHybrid_r": 17,
+    "ada_vectorSemanticHybrid_rtds": 15,
+    "ada_vectorSemanticHybrid_k": 16,
+    "ada_vectorSemanticHybrid_ktds": 15,
+    "emb3_vector_o": 24,
+    "emb3_vector_r": 22,
+    "emb3_vector_rtds": 29,
+    "emb3_vector_k": 22,
+    "emb3_vector_ktds": 25,
+    "emb3_vectorSemanticHybrid_o": 17,
+    "emb3_vectorSemanticHybrid_r": 17,
+    "emb3_vectorSemanticHybrid_rtds": 15,
+    "emb3_vectorSemanticHybrid_k": 15,
+    "emb3_vectorSemanticHybrid_ktds": 15,
+    "base": 19
+}

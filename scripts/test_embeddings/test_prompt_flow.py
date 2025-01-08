@@ -20,7 +20,7 @@ Configurations = {
         "deployment_model": "text-embedding-ada-002",
         "index": "cn-workloads-index-with-vectors"
     },
-    "embedding3": {
+    "emb3": {
         "deployment_model": "text-embedding-3-small",
         "index": "cn-workloads-index-with-vectors-embedding3"
     },
